@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# xsim v2022.1 (64-bit)
+# SW Build 3526262 on Mon Apr 18 15:48:16 MDT 2022
+# IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+# Start of session at: Sun Nov 13 22:17:21 2022
+# Process ID: 20740
+# Current directory: C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog
+# Command line: xsim.exe -mode tcl -source {xsim.dir/canny/xsim_script.tcl}
+# Log file: C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/xsim.log
+# Journal file: C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog\xsim.jou
+# Running On: DESKTOP-80C962T, OS: Windows, CPU Frequency: 3700 MHz, CPU Physical cores: 8, Host memory: 32143 MB
+#-----------------------------------------------------------
+source xsim.dir/canny/xsim_script.tcl
+open_wave_config canny_dataflow_ana.wcfg
+source canny.tcl

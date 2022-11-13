@@ -1,0 +1,1783 @@
+INFO-FLOW: Workspace C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1 opened at Sun Nov 13 22:10:19 +0800 2022
+Execute     ap_set_clock -name default -period 4.8 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4.8ns.
+Execute     ap_set_clock -name default -uncertainty 0 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+Execute     set_part xc7z020-clg400-1 
+Execute       create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2022.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2022.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 3.68 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.123 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.166 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 3.923 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vitis 
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Execute     get_config_interface -m_axi_latency 
+Execute     send_msg_by_id INFO @200-435@%s%s 'open_solution -flow_target vitis' config_interface -m_axi_latency=64 
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+Execute     config_interface -m_axi_latency=64 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     send_msg_by_id INFO @200-435@%s%s 'open_solution -flow_target vitis' config_interface -m_axi_alignment_byte_size=64 
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+Execute     config_interface -m_axi_alignment_byte_size=64 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     send_msg_by_id INFO @200-435@%s%s 'open_solution -flow_target vitis' config_interface -m_axi_max_widen_bitwidth=512 
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+Execute     config_interface -m_axi_max_widen_bitwidth=512 
+Execute     get_config_interface -default_interface 
+INFO-FLOW: Setting macro_cmd open_solution -flow_target vitis configuration: config_interface -default_interface=kernel
+Execute     config_interface -default_interface=kernel 
+Execute     get_config_rtl -register_reset_num 
+Execute     send_msg_by_id INFO @200-435@%s%s 'open_solution -flow_target vitis' config_rtl -register_reset_num=3 
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+Execute     config_rtl -register_reset_num=3 
+Command   open_solution done; 3.983 sec.
+Execute   set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+Execute     create_platform xc7z020-clg400-1 -board  
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.104 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.144 sec.
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.273 sec.
+Execute   create_clock -period 4.8 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 4.8 -name default 
+Execute   set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+Execute   source ./canny/solution1/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./canny/solution1/directives.tcl
+Execute     set_directive_top -name canny canny 
+INFO: [HLS 200-1510] Running: set_directive_top -name canny canny 
+Execute     set_directive_pipeline canny/NonMaxSup_y 
+INFO: [HLS 200-1510] Running: set_directive_pipeline canny/NonMaxSup_y 
+Execute     set_directive_unroll canny/gradient_theta_shift 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/gradient_theta_shift 
+Execute     set_directive_unroll canny/canny_label0 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label0 
+Execute     set_directive_unroll canny/canny_label1 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label1 
+Execute     set_directive_unroll canny/canny_label2 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label2 
+Execute     set_directive_unroll canny/canny_label3 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label3 
+Execute     set_directive_unroll canny/canny_label4 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label4 
+Execute     set_directive_unroll canny/canny_label5 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label5 
+Execute     set_directive_unroll canny/canny_label6 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label6 
+Execute     set_directive_unroll canny/canny_label7 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label7 
+Execute     set_directive_unroll canny/canny_label8 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label8 
+Execute     set_directive_unroll canny/canny_label9 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label9 
+Execute     set_directive_unroll canny/canny_label10 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label10 
+Execute     set_directive_unroll canny/canny_label11 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label11 
+Execute     set_directive_unroll canny/canny_label12 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label12 
+Execute     set_directive_unroll canny/canny_label13 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label13 
+Execute     set_directive_unroll canny/canny_label14 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label14 
+Execute     set_directive_unroll canny/canny_label15 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label15 
+Execute     set_directive_unroll canny/canny_label16 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label16 
+Execute     set_directive_unroll canny/canny_label17 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label17 
+Execute     set_directive_unroll canny/canny_label18 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label18 
+Execute     set_directive_unroll canny/canny_label19 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label19 
+Execute     set_directive_unroll canny/canny_label20 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label20 
+Execute     set_directive_unroll canny/canny_label21 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label21 
+Execute     set_directive_unroll canny/canny_label22 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label22 
+Execute     set_directive_unroll canny/canny_label23 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label23 
+Execute     set_directive_unroll canny/canny_label24 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label24 
+Execute     set_directive_unroll canny/canny_label25 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label25 
+Execute     set_directive_unroll canny/canny_label26 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label26 
+Execute     set_directive_unroll canny/canny_label27 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label27 
+Execute     set_directive_unroll canny/canny_label28 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label28 
+Execute     set_directive_unroll canny/canny_label29 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label29 
+Execute     set_directive_unroll canny/canny_label30 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label30 
+Execute     set_directive_unroll canny/canny_label31 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label31 
+Execute     set_directive_unroll canny/canny_label32 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label32 
+Execute     set_directive_unroll canny/canny_label33 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label33 
+Execute     set_directive_unroll canny/canny_label34 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label34 
+Execute     set_directive_unroll canny/canny_label35 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label35 
+Execute     set_directive_unroll canny/canny_label36 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label36 
+Execute     set_directive_unroll canny/canny_label37 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label37 
+Execute     set_directive_unroll canny/canny_label38 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label38 
+Execute     set_directive_unroll canny/canny_label39 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label39 
+Execute     set_directive_unroll canny/canny_label40 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label40 
+Execute     set_directive_unroll canny/canny_label41 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label41 
+Command   ap_source done; 0.196 sec.
+Execute   csynth_design 
+INFO: [HLS 200-1510] Running: csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -hw_syn 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -pre_tcl 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+WARNING: [HLS 200-40] Cannot find source file canny.hpp; skipping it.
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.063 seconds; current allocated memory: 1.365 GB.
+INFO: [HLS 200-10] Analyzing design file 'canny.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       get_config_compile -pragma_strict_mode 
+INFO-FLOW: Handling canny.cpp as C++
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP 39
+INFO-FLOW: Source preprocessing
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang canny.cpp -foptimization-record-file=C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info --sysroot C:/Xilinx/Vitis_HLS/2022.1/tps/mingw/8.3.0/win64.o/nt -fhls -fno-exceptions -E -I. -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-mingw32 -fno-threadsafe-statics -fno-use-cxa-atexit -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -I /usr/include/x86_64-linux-gnu -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.pp.0.cpp -hls-platform-db-name=C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.cpp.clang.out.log 2> C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.cpp.clang.err.log 
+Command       ap_eval done; 0.487 sec.
+INFO-FLOW: Done: GCC PP 39 time: 0.5 seconds per iteration
+Execute       set_directive_top canny -name=canny 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+INFO-FLOW: Source syntax check for synthesis
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fsyntax-only -fhls -target fpga64-xilinx-linux-gnu C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.pp.0.cpp -hls-platform-db-name=C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/clang.out.log 2> C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/clang.err.log 
+Command       ap_eval done; 4.712 sec.
+Execute       clang_tidy xilinx-systemc-detector -desc systemc-detector C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/.systemc_flag -fix-errors C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 4.74 sec.
+INFO-FLOW: Running: clang-tidy CDT preprocess 39
+Execute       clang_tidy xilinx-directive2pragma -desc directive2pragma C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.pp.0.cpp std=gnu++14 -target fpga  -directive=C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/all.directive.json -fix-errors C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 5.461 sec.
+Execute       clang_tidy xilinx-remove-assert -desc remove-assert C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.pp.0.cpp std=gnu++14 -target fpga  
+INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-remove-assert -fix-errors C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0
+Command       clang_tidy done; 5.02 sec.
+INFO-FLOW: Done: clang-tidy CDT preprocess 39 time: 10.5 seconds per iteration
+INFO-FLOW: Calling xilinx-label-all-loops ... 
+INFO-FLOW: Calling xilinx-aggregate-on-hls-vector ... 
+Execute       clang_tidy -errorcheck -desc loop-label xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.pp.0.cpp std=gnu++14 -target fpga  
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -export-fixes=C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.pp.0.cpp.clang-tidy.loop-label.diag.yml -header-filter=.* --checks=-*,xilinx-label-all-loops,xilinx-aggregate-on-hls-vector,,xilinx-warn-mayneed-no-ctor-attribute -fix-errors C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 > C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.pp.0.cpp.clang-tidy.loop-label.out.log 2> C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.pp.0.cpp.clang-tidy.loop-label.err.log 
+Command         ap_eval done; 8.848 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Command       clang_tidy done; 9.454 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.pp.0.cpp.xilinx-dataflow-lawyer.diag.yml C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.pp.0.cpp -- -std=gnu++14 -target fpga -fhls -ferror-limit=0 -fstrict-dataflow > C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.pp.0.cpp.xilinx-dataflow-lawyer.out.log 2> C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.pp.0.cpp.xilinx-dataflow-lawyer.err.log 
+Command       ap_eval done; 4.552 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: compiling source code to llvm bc
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.pp.0.cpp.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fno-limit-debug-info -fhls -flto -fno-exceptions -Wno-error=c++11-narrowing C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.pp.0.cpp -I. -fno-math-errno -c -emit-llvm -mllvm -disable-llvm-optzns -Werror=implicit-function-declaration -Werror=implicit-hls-streams -Werror=return-type -Wpragmas -Wunused-parameter -Wdump-hls-pragmas -fno-threadsafe-statics -fno-use-cxa-atexit -std=gnu++14 -target fpga64-xilinx-linux-gnu -D__VITIS_HLS__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot -I C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.bc -hls-platform-db-name=C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.pp.0.cpp.clang.out.log 2> C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.pp.0.cpp.clang.err.log 
+Command       ap_eval done; 4.866 sec.
+WARNING: [HLS 207-5292] unused parameter 'upperThresh' (canny.cpp:14:80)
+WARNING: [HLS 207-5292] unused parameter 'lowerThresh' (canny.cpp:14:97)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 39.968 seconds; current allocated memory: 1.365 GB.
+INFO-FLOW: Linking Debug ...
+INFO-FLOW: Linking dut bc code.
+Execute       run_link_or_opt -out C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.0.bc -args  "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.g.bc"  
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.g.bc -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.0.bc > C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.out.log 2> C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.0.bc.llvm-link.err.log 
+INFO-FLOW: 
+Execute       run_link_or_opt -opt -out C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.1.lower.bc -args C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.diag.yml C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.0.bc -reflow-lower-math-intrinsics -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.1.lower.bc > C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.out.log 2> C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.1.lower.bc.opt.err.log 
+INFO-FLOW: 
+INFO-FLOW: Linking math bc lib
+Execute       run_link_or_opt -out C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.2.m1.bc -args C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsm_39.bc C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsmc++_39.bc 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.1.lower.bc -only-needed C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsm_39.bc C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libhlsmc++_39.bc -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.2.m1.bc > C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.out.log 2> C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.2.m1.bc.llvm-link.err.log 
+Command         ap_eval done; 3.257 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 3.259 sec.
+Execute       run_link_or_opt -opt -out C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.3.fpc.bc -args C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=canny -reflow-float-conversion 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.diag.yml C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.2.m1.bc -reflow-globaldce -hls-top-function-name=canny -reflow-float-conversion -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.3.fpc.bc > C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.out.log 2> C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.3.fpc.bc.opt.err.log 
+Command         ap_eval done; 1.285 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 1.29 sec.
+Execute       run_link_or_opt -out C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.4.m2.bc -args C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libfloatconversion_39.bc 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/llvm-link C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.3.fpc.bc -only-needed C:/Xilinx/Vitis_HLS/2022.1/win64/lib/libfloatconversion_39.bc -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.4.m2.bc > C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.out.log 2> C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.4.m2.bc.llvm-link.err.log 
+Command         ap_eval done; 0.12 sec.
+INFO-FLOW: 
+Command       run_link_or_opt done; 0.123 sec.
+Execute       run_link_or_opt -opt -out C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.5.gdce.bc -args C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=canny 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/opt -pass-remarks-missed=reflow|pasta|unroll -pass-remarks=reflow|pasta|unroll|inline -pass-remarks-output=C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.diag.yml C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.4.m2.bc -reflow-globaldce -hls-top-function-name=canny -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.5.gdce.bc > C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.out.log 2> C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.5.gdce.bc.opt.err.log 
+INFO-FLOW: 
+Execute       get_solution -flow_target 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_solution -flow_target 
+Execute       get_config_interface -m_axi_offset 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_auto_max_ports 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -s_axilite_data64 
+Execute       get_config_compile -instruction_warning_threshold 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_compile -pragma_strict_mode 
+Execute       get_config_compile -pipeline_style 
+Execute       get_config_dataflow -strict_mode 
+Execute       get_config_array_partition -throughput_driven 
+Execute       send_msg_by_id INFO @200-777@%s Vitis 
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+Execute       is_m_axi_addr64 
+Execute       get_clock_period -ns -default 
+INFO-FLOW: Doing LTO.
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang -foptimization-record-file=C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.0.bc.clang.diag.yml -mllvm -pass-remarks-missed=reflow|pasta|unroll -mllvm -pass-remarks=reflow|pasta|unroll|inline -fhls -mllvm -hls-top-function-name=canny -mllvm -hls-db-dir -mllvm C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db -emit-llvm -c -target fpga64-xilinx-none -mllvm -xcl-xmlinfo=C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/../../../kernel.xml -mllvm -top-io-mapping-info=C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/top-io-fe.xml -mllvm -hls-bitcode-version=3.1 -mllvm -reflow-enable-slave-interface-default-setting=true -mllvm -gen-kernel-xml=true -mllvm -default-maxi-offset=slave -mllvm -maxi-latency=64 -mllvm -hls-maxi-data-size-in-bits=8 -mllvm -hls-maxi-max-data-size-in-bits=1024 -mllvm -hls-max-widen-size-in-bits=512 -mllvm -xcl-kernel-max-mem-ports=0 -mllvm -maxi-read-trans=16 -mllvm -maxi-write-trans=16 -mllvm -maxi-read-burst-len=16 -mllvm -maxi-write-burst-len=16 -mllvm -reflow-enable-saxi-64bits=0 -mllvm -reflow-basic-block-instr-threshold=200000 -mllvm -reflow-auto-pipeline-threshold=64 -mllvm -assume-maxi-align=64 -mllvm -no-unaligned-maxi-accesses=false -mllvm -reflow-pipeline-style-llvm-setting=2 -mllvm -reflow-enable-dataflow-strict-mode-checking=1 -mllvm -reflow-auto-array-partition-mode=default -mllvm -reflow-enable-auto-array-partition=true -mllvm -reflow-enable-auto-parallel-performance-driven=true -mllvm -reflow-enable-partition-for-automation=true -mllvm -reflow-aggregate-bitwidth-threshold=4096 -mllvm -hls -mllvm -disable-inlined-alloca-merging=true -mllvm -enable-reflow-vitis-flow-setting=true -x ir C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.5.gdce.bc -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.lto.bc -hls-platform-db-name=C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/platform.db -hls-platform-name=zynq_slow -device-resource-info=BRAM_280.000000_DSP_220.000000_FF_106400.000000_LUT_53200.000000_SLICE_13300.000000_URAM_0.000000 > C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.0.bc.clang.out.log 2> C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.ld.0.bc.clang.err.log 
+Command       ap_eval done; 6.547 sec.
+INFO: [HLS 214-131] Inlining function 'ssdm_int<8, true>::ssdm_int(signed char)' into 'ap_int_base<8, true>::ap_int_base(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, true>::ap_int_base(int)' into 'ap_int<8>::ap_int(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int.h:179:57)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi17ELb1EEC2EDq17_i' into 'ap_int_base<17, true>::ap_int_base(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<17, true>::ap_int_base(int)' into 'ap_int<17>::ap_int(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int.h:179:57)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi11ELb1EEC2EDq11_i' into 'ap_int_base<11, true>::ap_int_base(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<11, true>::ap_int_base(int)' into 'ap_int<11>::ap_int(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int.h:179:57)
+INFO: [HLS 214-131] Inlining function 'ssdm_int<32, true>::ssdm_int(int)' into 'ap_int_base<32, true>::ap_int_base(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi43ELb1EEC2EDq43_i' into 'ap_int_base<43, true>::ap_int_base<11, true>(ap_int_base<11, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:231:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi43ELb1EEC2EDq43_i' into 'ap_int_base<43, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:231:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi43ELb1EEC2EDq43_i' into 'ap_int_base<43, true>::ap_int_base(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<43, true>::ap_int_base<11, true>(ap_int_base<11, true> const&)' into 'ap_int_base<11, true>::RType<32, true>::mult operator*<11, true, 32, true>(ap_int_base<11, true> const&, ap_int_base<32, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1540:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<43>::ap_int<43, true>(ap_int_base<43, true> const&)' into 'ap_int_base<11, true>::RType<32, true>::mult operator*<11, true, 32, true>(ap_int_base<11, true> const&, ap_int_base<32, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1540:554)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<43, true>::ap_int_base(int)' into 'ap_int_base<11, true>::RType<32, true>::mult operator*<11, true, 32, true>(ap_int_base<11, true> const&, ap_int_base<32, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1540:516)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<43, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<11, true>::RType<32, true>::mult operator*<11, true, 32, true>(ap_int_base<11, true> const&, ap_int_base<32, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1540:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int_base<11, true>::RType<($_0)32, true>::mult operator*<11, true>(ap_int_base<11, true> const&, int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1679:483)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<11, true>::RType<32, true>::mult operator*<11, true, 32, true>(ap_int_base<11, true> const&, ap_int_base<32, true> const&)' into 'ap_int_base<11, true>::RType<($_0)32, true>::mult operator*<11, true>(ap_int_base<11, true> const&, int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1679:481)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi44ELb1EEC2EDq44_i' into 'ap_int_base<44, true>::ap_int_base<43, true>(ap_int_base<43, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:231:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi44ELb1EEC2EDq44_i' into 'ap_int_base<44, true>::ap_int_base<11, true>(ap_int_base<11, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:231:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi44ELb1EEC2EDq44_i' into 'ap_int_base<44, true>::ap_int_base(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<44, true>::ap_int_base<43, true>(ap_int_base<43, true> const&)' into 'ap_int_base<43, true>::RType<11, true>::plus operator+<43, true, 11, true>(ap_int_base<43, true> const&, ap_int_base<11, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<44>::ap_int<44, true>(ap_int_base<44, true> const&)' into 'ap_int_base<43, true>::RType<11, true>::plus operator+<43, true, 11, true>(ap_int_base<43, true> const&, ap_int_base<11, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541:554)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<44, true>::ap_int_base(int)' into 'ap_int_base<43, true>::RType<11, true>::plus operator+<43, true, 11, true>(ap_int_base<43, true> const&, ap_int_base<11, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541:516)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<44, true>::ap_int_base<11, true>(ap_int_base<11, true> const&)' into 'ap_int_base<43, true>::RType<11, true>::plus operator+<43, true, 11, true>(ap_int_base<43, true> const&, ap_int_base<11, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541:427)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi40ELb1EEC2EDq40_i' into 'ap_int_base<40, true>::ap_int_base<8, true>(ap_int_base<8, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:231:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi40ELb1EEC2EDq40_i' into 'ap_int_base<40, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:231:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi40ELb1EEC2EDq40_i' into 'ap_int_base<40, true>::ap_int_base(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<40, true>::ap_int_base<8, true>(ap_int_base<8, true> const&)' into 'ap_int_base<8, true>::RType<32, true>::mult operator*<8, true, 32, true>(ap_int_base<8, true> const&, ap_int_base<32, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1540:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<40>::ap_int<40, true>(ap_int_base<40, true> const&)' into 'ap_int_base<8, true>::RType<32, true>::mult operator*<8, true, 32, true>(ap_int_base<8, true> const&, ap_int_base<32, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1540:554)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<40, true>::ap_int_base(int)' into 'ap_int_base<8, true>::RType<32, true>::mult operator*<8, true, 32, true>(ap_int_base<8, true> const&, ap_int_base<32, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1540:516)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<40, true>::ap_int_base<32, true>(ap_int_base<32, true> const&)' into 'ap_int_base<8, true>::RType<32, true>::mult operator*<8, true, 32, true>(ap_int_base<8, true> const&, ap_int_base<32, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1540:427)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'ap_int_base<8, true>::RType<($_0)32, true>::mult operator*<8, true>(ap_int_base<8, true> const&, int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1679:483)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, true>::RType<32, true>::mult operator*<8, true, 32, true>(ap_int_base<8, true> const&, ap_int_base<32, true> const&)' into 'ap_int_base<8, true>::RType<($_0)32, true>::mult operator*<8, true>(ap_int_base<8, true> const&, int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1679:481)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<17, true>::ap_int_base(int)' into 'ap_int_base<17, true>::RType<17, true>::arg1 operator>><17, true>(ap_int_base<17, true> const&, int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1715:558)
+INFO: [HLS 214-131] Inlining function 'ap_int<17>::ap_int<17, true>(ap_int_base<17, true> const&)' into 'ap_int_base<17, true>::RType<17, true>::arg1 operator>><17, true>(ap_int_base<17, true> const&, int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1715:656)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi34ELb1EEC2EDq34_i' into 'ap_int_base<34, true>::ap_int_base<17, true>(ap_int_base<17, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:231:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi34ELb1EEC2EDq34_i' into 'ap_int_base<34, true>::ap_int_base(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<34, true>::ap_int_base<17, true>(ap_int_base<17, true> const&)' into 'ap_int_base<17, true>::RType<17, true>::mult operator*<17, true, 17, true>(ap_int_base<17, true> const&, ap_int_base<17, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1540:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<34>::ap_int<34, true>(ap_int_base<34, true> const&)' into 'ap_int_base<17, true>::RType<17, true>::mult operator*<17, true, 17, true>(ap_int_base<17, true> const&, ap_int_base<17, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1540:554)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<34, true>::ap_int_base(int)' into 'ap_int_base<17, true>::RType<17, true>::mult operator*<17, true, 17, true>(ap_int_base<17, true> const&, ap_int_base<17, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1540:516)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<34, true>::ap_int_base<17, true>(ap_int_base<17, true> const&)' into 'ap_int_base<17, true>::RType<17, true>::mult operator*<17, true, 17, true>(ap_int_base<17, true> const&, ap_int_base<17, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1540:427)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi35ELb1EEC2EDq35_i' into 'ap_int_base<35, true>::ap_int_base<34, true>(ap_int_base<34, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:231:106)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi35ELb1EEC2EDq35_i' into 'ap_int_base<35, true>::ap_int_base(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<35, true>::ap_int_base<34, true>(ap_int_base<34, true> const&)' into 'ap_int_base<34, true>::RType<34, true>::plus operator+<34, true, 34, true>(ap_int_base<34, true> const&, ap_int_base<34, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541:339)
+INFO: [HLS 214-131] Inlining function 'ap_int<35>::ap_int<35, true>(ap_int_base<35, true> const&)' into 'ap_int_base<34, true>::RType<34, true>::plus operator+<34, true, 34, true>(ap_int_base<34, true> const&, ap_int_base<34, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541:554)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<35, true>::ap_int_base(int)' into 'ap_int_base<34, true>::RType<34, true>::plus operator+<34, true, 34, true>(ap_int_base<34, true> const&, ap_int_base<34, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541:516)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<35, true>::ap_int_base<34, true>(ap_int_base<34, true> const&)' into 'ap_int_base<34, true>::RType<34, true>::plus operator+<34, true, 34, true>(ap_int_base<34, true> const&, ap_int_base<34, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541:427)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi22ELb1EEC2EDq22_i' into 'ap_int_base<22, true>::ap_int_base<35, true>(ap_int_base<35, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:231:106)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<22, true>::ap_int_base<35, true>(ap_int_base<35, true> const&)' into 'ap_int<22>::ap_int<35>(ap_int<35> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int.h:69:89)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator==<17, true>(ap_int_base<17, true> const&, int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1834:1853)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<17, true>::operator==<32, true>(ap_int_base<32, true> const&) const' into 'bool operator==<17, true>(ap_int_base<17, true> const&, int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1834:1850)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi10ELb1EEC2EDq10_i' into 'ap_int_base<10, true>::ap_int_base(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<10, true>::ap_int_base(int)' into 'ap_int<10>::ap_int(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int.h:179:57)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<17, true>::ap_int_base(int)' into 'ap_int_base<17, true>::RType<17, true>::arg1 operator<<<17, true>(ap_int_base<17, true> const&, int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1715:228)
+INFO: [HLS 214-131] Inlining function 'ap_int<17>::ap_int<17, true>(ap_int_base<17, true> const&)' into 'ap_int_base<17, true>::RType<17, true>::arg1 operator<<<17, true>(ap_int_base<17, true> const&, int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1715:326)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi18ELb1EEC2EDq18_i' into 'ap_int_base<18, true>::ap_int_base(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<18, true>::ap_int_base(int)' into 'ap_int_base<17, true>::RType<17, true>::div operator/<17, true, 17, true>(ap_int_base<17, true> const&, ap_int_base<17, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1559:337)
+INFO: [HLS 214-131] Inlining function 'ap_int<18>::ap_int<18, true>(ap_int_base<18, true> const&)' into 'ap_int_base<17, true>::RType<17, true>::div operator/<17, true, 17, true>(ap_int_base<17, true> const&, ap_int_base<17, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1559:374)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi10ELb1EEC2EDq10_i' into 'ap_int_base<10, true>::ap_int_base<18, true>(ap_int_base<18, true> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:231:106)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<10, true>::ap_int_base<18, true>(ap_int_base<18, true> const&)' into 'ap_int<10>::ap_int<18>(ap_int<18> const&)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int.h:69:89)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator<=<10, true>(ap_int_base<10, true> const&, int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1834:1473)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<10, true>::operator<=<32, true>(ap_int_base<32, true> const&) const' into 'bool operator<=<10, true>(ap_int_base<10, true> const&, int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1834:1470)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator><10, true>(ap_int_base<10, true> const&, int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1834:337)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<10, true>::operator><32, true>(ap_int_base<32, true> const&) const' into 'bool operator><10, true>(ap_int_base<10, true> const&, int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1834:335)
+INFO: [HLS 214-131] Inlining function '_ZN8ssdm_intILi22ELb1EEC2EDq22_i' into 'ap_int_base<22, true>::ap_int_base(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260:67)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<22, true>::ap_int_base(int)' into 'ap_int<22>::ap_int(int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int.h:179:57)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator>=<22, true>(ap_int_base<22, true> const&, int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1834:1093)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<22, true>::operator>=<32, true>(ap_int_base<32, true> const&) const' into 'bool operator>=<22, true>(ap_int_base<22, true> const&, int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1834:1090)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<32, true>::ap_int_base(int)' into 'bool operator><22, true>(ap_int_base<22, true> const&, int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1834:337)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<22, true>::operator><32, true>(ap_int_base<32, true> const&) const' into 'bool operator><22, true>(ap_int_base<22, true> const&, int)' (C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1834:335)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:19:31)
+INFO: [HLS 214-131] Inlining function 'bool operator><22, true>(ap_int_base<22, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:193:48)
+INFO: [HLS 214-131] Inlining function 'bool operator>=<22, true>(ap_int_base<22, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:193:23)
+INFO: [HLS 214-131] Inlining function 'ap_int<22>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:192:15)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<22, true>::operator long long() const' into 'canny(int*, int*, int, int)' (canny.cpp:192:50)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<22, true>::operator>=<22, true>(ap_int_base<22, true> const&) const' into 'canny(int*, int*, int, int)' (canny.cpp:192:38)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<22, true>::operator>=<22, true>(ap_int_base<22, true> const&) const' into 'canny(int*, int*, int, int)' (canny.cpp:192:23)
+INFO: [HLS 214-131] Inlining function 'bool operator><10, true>(ap_int_base<10, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:183:39)
+INFO: [HLS 214-131] Inlining function 'bool operator<=<10, true>(ap_int_base<10, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:183:20)
+INFO: [HLS 214-131] Inlining function 'bool operator><10, true>(ap_int_base<10, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:179:38)
+INFO: [HLS 214-131] Inlining function 'bool operator<=<10, true>(ap_int_base<10, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:179:20)
+INFO: [HLS 214-131] Inlining function 'bool operator><10, true>(ap_int_base<10, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:175:39)
+INFO: [HLS 214-131] Inlining function 'bool operator<=<10, true>(ap_int_base<10, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:175:21)
+INFO: [HLS 214-131] Inlining function 'ap_int<10>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:174:22)
+INFO: [HLS 214-131] Inlining function 'ap_int<22>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:173:18)
+INFO: [HLS 214-131] Inlining function 'bool operator><22, true>(ap_int_base<22, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:155:71)
+INFO: [HLS 214-131] Inlining function 'bool operator>=<22, true>(ap_int_base<22, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:155:46)
+INFO: [HLS 214-131] Inlining function 'ap_int<22>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:153:19)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<22, true>::operator long long() const' into 'canny(int*, int*, int, int)' (canny.cpp:153:54)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<22, true>::operator>=<22, true>(ap_int_base<22, true> const&) const' into 'canny(int*, int*, int, int)' (canny.cpp:153:42)
+INFO: [HLS 214-131] Inlining function 'bool ap_int_base<22, true>::operator>=<22, true>(ap_int_base<22, true> const&) const' into 'canny(int*, int*, int, int)' (canny.cpp:153:27)
+INFO: [HLS 214-131] Inlining function 'bool operator><10, true>(ap_int_base<10, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:143:49)
+INFO: [HLS 214-131] Inlining function 'bool operator<=<10, true>(ap_int_base<10, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:143:30)
+INFO: [HLS 214-131] Inlining function 'bool operator><10, true>(ap_int_base<10, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:139:48)
+INFO: [HLS 214-131] Inlining function 'bool operator<=<10, true>(ap_int_base<10, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:139:30)
+INFO: [HLS 214-131] Inlining function 'bool operator><10, true>(ap_int_base<10, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:135:43)
+INFO: [HLS 214-131] Inlining function 'bool operator<=<10, true>(ap_int_base<10, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:135:25)
+INFO: [HLS 214-131] Inlining function 'ap_int<10>::ap_int<18>(ap_int<18> const&)' into 'canny(int*, int*, int, int)' (canny.cpp:115:30)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<17, true>::RType<17, true>::div operator/<17, true, 17, true>(ap_int_base<17, true> const&, ap_int_base<17, true> const&)' into 'canny(int*, int*, int, int)' (canny.cpp:115:36)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<17, true>::RType<17, true>::arg1 operator<<<17, true>(ap_int_base<17, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:115:32)
+INFO: [HLS 214-131] Inlining function 'ap_int<10>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:113:30)
+INFO: [HLS 214-131] Inlining function 'bool operator==<17, true>(ap_int_base<17, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:112:18)
+INFO: [HLS 214-131] Inlining function 'ap_int<22>::ap_int<35>(ap_int<35> const&)' into 'canny(int*, int*, int, int)' (canny.cpp:110:22)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<34, true>::RType<34, true>::plus operator+<34, true, 34, true>(ap_int_base<34, true> const&, ap_int_base<34, true> const&)' into 'canny(int*, int*, int, int)' (canny.cpp:110:27)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<17, true>::RType<17, true>::mult operator*<17, true, 17, true>(ap_int_base<17, true> const&, ap_int_base<17, true> const&)' into 'canny(int*, int*, int, int)' (canny.cpp:110:30)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<17, true>::RType<17, true>::mult operator*<17, true, 17, true>(ap_int_base<17, true> const&, ap_int_base<17, true> const&)' into 'canny(int*, int*, int, int)' (canny.cpp:110:24)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<17, true>::RType<17, true>::arg1 operator>><17, true>(ap_int_base<17, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:96:19)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<17, true>::RType<17, true>::arg1 operator>><17, true>(ap_int_base<17, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:95:19)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<17, true>& ap_int_base<17, true>::operator+=<40, true>(ap_int_base<40, true> const&)' into 'canny(int*, int*, int, int)' (canny.cpp:91:23)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, true>::RType<($_0)32, true>::mult operator*<8, true>(ap_int_base<8, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:91:58)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<44, true>::operator long long() const' into 'canny(int*, int*, int, int)' (canny.cpp:91:71)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<43, true>::RType<11, true>::plus operator+<43, true, 11, true>(ap_int_base<43, true> const&, ap_int_base<11, true> const&)' into 'canny(int*, int*, int, int)' (canny.cpp:91:79)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<11, true>::RType<($_0)32, true>::mult operator*<11, true>(ap_int_base<11, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:91:75)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<17, true>& ap_int_base<17, true>::operator+=<40, true>(ap_int_base<40, true> const&)' into 'canny(int*, int*, int, int)' (canny.cpp:90:23)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<8, true>::RType<($_0)32, true>::mult operator*<8, true>(ap_int_base<8, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:90:58)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<44, true>::operator long long() const' into 'canny(int*, int*, int, int)' (canny.cpp:90:71)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<43, true>::RType<11, true>::plus operator+<43, true, 11, true>(ap_int_base<43, true> const&, ap_int_base<11, true> const&)' into 'canny(int*, int*, int, int)' (canny.cpp:90:79)
+INFO: [HLS 214-131] Inlining function 'ap_int_base<11, true>::RType<($_0)32, true>::mult operator*<11, true>(ap_int_base<11, true> const&, int)' into 'canny(int*, int*, int, int)' (canny.cpp:90:75)
+INFO: [HLS 214-131] Inlining function 'ap_int<11>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:86:31)
+INFO: [HLS 214-131] Inlining function 'ap_int<11>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:83:31)
+INFO: [HLS 214-131] Inlining function 'ap_int<11>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:80:31)
+INFO: [HLS 214-131] Inlining function 'ap_int<11>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:77:31)
+INFO: [HLS 214-131] Inlining function 'ap_int<11>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:74:31)
+INFO: [HLS 214-131] Inlining function 'ap_int<11>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:71:31)
+INFO: [HLS 214-131] Inlining function 'ap_int<17>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:63:17)
+INFO: [HLS 214-131] Inlining function 'ap_int<17>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:62:17)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:23:25)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:23:21)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:23:18)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:23:13)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:23:8)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:22:25)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:22:21)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:22:18)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:22:13)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:22:8)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:21:25)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:21:21)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:21:18)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:21:13)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:21:8)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:20:25)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:20:21)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:20:18)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:20:13)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:20:8)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:19:48)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:19:44)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:19:41)
+INFO: [HLS 214-131] Inlining function 'ap_int<8>::ap_int(int)' into 'canny(int*, int*, int, int)' (canny.cpp:19:36)
+INFO: [HLS 214-186] Unrolling loop 'rest_G_shift' (canny.cpp:162:9) in function 'canny' completely with a factor of 258 (canny.cpp:15:0)
+INFO: [HLS 214-186] Unrolling loop 'rest_theta_shift' (canny.cpp:168:9) in function 'canny' completely with a factor of 129 (canny.cpp:15:0)
+INFO: [HLS 214-186] Unrolling loop 'kernel_r' (canny.cpp:65:13) in function 'canny' completely with a factor of 5 (canny.cpp:15:0)
+INFO: [HLS 214-186] Unrolling loop 'gradient_shift' (canny.cpp:99:13) in function 'canny' completely with a factor of 258 (canny.cpp:15:0)
+INFO: [HLS 214-186] Unrolling loop 'theta_shift' (canny.cpp:105:13) in function 'canny' completely with a factor of 129 (canny.cpp:15:0)
+INFO: [HLS 214-186] Unrolling loop 'shift_reg' (canny.cpp:118:13) in function 'canny' completely with a factor of 516 (canny.cpp:15:0)
+INFO: [HLS 214-186] Unrolling loop 'window_y' (canny.cpp:128:5) in function 'canny' completely with a factor of 5 (canny.cpp:15:0)
+INFO: [HLS 214-186] Unrolling loop 'read_shift' (canny.cpp:50:9) in function 'canny' completely with a factor of 516 (canny.cpp:15:0)
+INFO: [HLS 214-248] Applying array_partition to 'gauss_sobel': Complete partitioning on dimension 1.
+INFO: [HLS 214-248] Applying array_partition to 'img_window': Complete partitioning on dimension 1. (canny.cpp:27:8)
+INFO: [HLS 214-248] Applying array_partition to 'img_buffer': Complete partitioning on dimension 1. (canny.cpp:30:8)
+INFO: [HLS 214-248] Applying array_partition to 'G': Complete partitioning on dimension 1. (canny.cpp:33:13)
+INFO: [HLS 214-248] Applying array_partition to 'theta': Complete partitioning on dimension 1. (canny.cpp:36:13)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'src' (canny.cpp:15:0)
+WARNING: [HLS 214-142] Implementing stream: may cause mismatch if read and write accesses are not in sequential order on port 'dst' (canny.cpp:15:0)
+INFO-FLOW: DBG:PUTS: copy_raw_kernel_xml ap_link_39: copying raw kernel.xml: C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/../../../kernel.xml -> C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/kernel.internal.xml
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 14.182 seconds; current allocated memory: 1.365 GB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.006 seconds; current allocated memory: 1.365 GB.
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top canny -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.0.bc -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 1.99 sec.
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 2.016 seconds; current allocated memory: 1.365 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -array-seg-normalize -instcombine -dce -data-pack -instcombine -dce -inst-simplify -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.1.bc -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 0.357 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.2.prechk.bc -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.436 seconds; current allocated memory: 1.365 GB.
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.g.1.bc to C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db -interface-port-rename -function-uniquify -directive-preproc -mem2reg -dse -dce -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -function-uniquify -directive-preproc -mem2reg -dse -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -prepare-dynamic-array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -scalar-auto-dep-elim -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -accesses-merge -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin2 -bitwidthmin2 -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -duplicate-dataflow-processes -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -hls-dead-arg-elim -deadargelim -directive-preproc -annotate-dataflow-channels -canonicalize-dataflow -dce -globaldce -scalar-preprocessing -scalar-propagation2 -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -hls-display -norm-name C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.o.1.bc -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-510] Pipelining loop 'read_img' (canny.cpp:48) in function 'canny' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'idy' (canny.cpp:27) in function 'canny' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'rest_result' (canny.cpp:160) in function 'canny' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'idy' (canny.cpp:27) in function 'canny' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'kernel_c' (canny.cpp:41) in function 'canny' completely with a factor of 5.
+INFO: [HLS 200-489] Unrolling loop 'window_x' (canny.cpp:27) in function 'canny' completely with a factor of 5.
+Command         transform done; 3.998 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin2 -bitwidthmin2 -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -barrier -norm-name C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.o.1.tmp.bc -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (canny.cpp:27:8) to (canny.cpp:112:16) in function 'canny'... converting 21 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (canny.cpp:36:13) to (canny.cpp:154:16) in function 'canny'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (canny.cpp:160:13) to (canny.cpp:160:5) in function 'canny'... converting 4 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'canny' (canny.cpp:14)...59 expression(s) balanced.
+Command         transform done; 1.115 sec.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 5 seconds. CPU system time: 0 seconds. Elapsed time: 5.123 seconds; current allocated memory: 1.365 GB.
+Execute         get_config_compile -enable_auto_rewind 
+Execute         get_config_compile -enable_loop_extract 
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -aggr-aa -licm -loop-dep -loop-bound -licm -loop-simplify -loop-sink-hoist -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -deadargelim -dce -canonicalize-dataflow -dce -deadargelim -globaldce -mem2reg -bram-byte-enable -load-elim -read-loop-dep -loop-simplify -loop-extract-inner -directive-preproc -bitwidthmin2 -bitwidthmin2 -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable-spec-prop -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -float-op-raise -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -float-op-raise -fma-raise -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -dyn-mem-reuse -dce -recurrence-min -dce -share-scalar-alloca -deadargelim -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.o.2.bc -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'idx' (canny.cpp:27:8) in function 'canny'.
+Command         transform done; 4.175 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 4.18 seconds; current allocated memory: 1.365 GB.
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 11.778 sec.
+Command     elaborate done; 65.989 sec.
+Execute     ap_eval exec zip -j C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/dut.hcp $dbDir/a.o.3.bc $dbDir/${topname}.rtl_wrap.cfg.tcl $dbDir/apatb_${topname}.cpp $dbDir/apatb_${topname}_util.cpp $dbDir/apatb_${topname}_ir.ll $dbDir/mapper_${topname}.cpp $dbDir/top-io-fe.xml $dbDir/kernel.internal.xml $workdir/../hls.app 
+Command     ap_eval done; 0.106 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'canny' ...
+Execute       ap_set_top_model canny 
+Execute       get_model_list canny -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model canny 
+Execute       preproc_iomode -model canny_Pipeline_rest_result 
+Execute       preproc_iomode -model canny_Pipeline_idx_idy 
+Execute       preproc_iomode -model canny_Pipeline_read_img 
+Execute       get_model_list canny -filter all-wo-channel 
+INFO-FLOW: Model list for configure: canny_Pipeline_read_img canny_Pipeline_idx_idy canny_Pipeline_rest_result canny
+INFO-FLOW: Configuring Module : canny_Pipeline_read_img ...
+Execute       set_default_model canny_Pipeline_read_img 
+Execute       apply_spec_resource_limit canny_Pipeline_read_img 
+INFO-FLOW: Configuring Module : canny_Pipeline_idx_idy ...
+Execute       set_default_model canny_Pipeline_idx_idy 
+Execute       apply_spec_resource_limit canny_Pipeline_idx_idy 
+INFO-FLOW: Configuring Module : canny_Pipeline_rest_result ...
+Execute       set_default_model canny_Pipeline_rest_result 
+Execute       apply_spec_resource_limit canny_Pipeline_rest_result 
+INFO-FLOW: Configuring Module : canny ...
+Execute       set_default_model canny 
+Execute       apply_spec_resource_limit canny 
+INFO-FLOW: Model list for preprocess: canny_Pipeline_read_img canny_Pipeline_idx_idy canny_Pipeline_rest_result canny
+INFO-FLOW: Preprocessing Module: canny_Pipeline_read_img ...
+Execute       set_default_model canny_Pipeline_read_img 
+Execute       cdfg_preprocess -model canny_Pipeline_read_img 
+Command       cdfg_preprocess done; 2.795 sec.
+Execute       rtl_gen_preprocess canny_Pipeline_read_img 
+INFO-FLOW: Preprocessing Module: canny_Pipeline_idx_idy ...
+Execute       set_default_model canny_Pipeline_idx_idy 
+Execute       cdfg_preprocess -model canny_Pipeline_idx_idy 
+Command       cdfg_preprocess done; 5.786 sec.
+Execute       rtl_gen_preprocess canny_Pipeline_idx_idy 
+INFO-FLOW: Preprocessing Module: canny_Pipeline_rest_result ...
+Execute       set_default_model canny_Pipeline_rest_result 
+Execute       cdfg_preprocess -model canny_Pipeline_rest_result 
+Command       cdfg_preprocess done; 0.749 sec.
+Execute       rtl_gen_preprocess canny_Pipeline_rest_result 
+INFO-FLOW: Preprocessing Module: canny ...
+Execute       set_default_model canny 
+Execute       cdfg_preprocess -model canny 
+Command       cdfg_preprocess done; 0.545 sec.
+Execute       rtl_gen_preprocess canny 
+INFO-FLOW: Model list for synthesis: canny_Pipeline_read_img canny_Pipeline_idx_idy canny_Pipeline_rest_result canny
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'canny_Pipeline_read_img' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model canny_Pipeline_read_img 
+Execute       schedule -model canny_Pipeline_read_img 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'read_img'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'read_img'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 1.028 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 11 seconds. CPU system time: 0 seconds. Elapsed time: 11.085 seconds; current allocated memory: 1.365 GB.
+Execute       syn_report -verbosereport -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_read_img.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_read_img.sched.adb -f 
+Command       db_write done; 0.324 sec.
+INFO-FLOW: Finish scheduling canny_Pipeline_read_img.
+Execute       set_default_model canny_Pipeline_read_img 
+Execute       bind -model canny_Pipeline_read_img 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.512 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 0.924 seconds; current allocated memory: 1.365 GB.
+Execute       syn_report -verbosereport -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_read_img.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.123 sec.
+Execute       db_write -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_read_img.bind.adb -f 
+Command       db_write done; 0.421 sec.
+INFO-FLOW: Finish binding canny_Pipeline_read_img.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'canny_Pipeline_idx_idy' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model canny_Pipeline_idx_idy 
+Execute       schedule -model canny_Pipeline_idx_idy 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln75_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_2) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln886_22) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_6) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_14) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_16) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_12) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_7) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_15) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_10) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln886_1) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'idx_idy'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 34, loop 'idx_idy'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 6.765 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 7 seconds. CPU system time: 0 seconds. Elapsed time: 7.339 seconds; current allocated memory: 1.365 GB.
+Execute       syn_report -verbosereport -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_idx_idy.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.39 sec.
+Execute       db_write -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_idx_idy.sched.adb -f 
+Command       db_write done; 0.694 sec.
+INFO-FLOW: Finish scheduling canny_Pipeline_idx_idy.
+Execute       set_default_model canny_Pipeline_idx_idy 
+Execute       bind -model canny_Pipeline_idx_idy 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 1.612 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 3 seconds. CPU system time: 0 seconds. Elapsed time: 2.696 seconds; current allocated memory: 1.365 GB.
+Execute       syn_report -verbosereport -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_idx_idy.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.873 sec.
+Execute       db_write -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_idx_idy.bind.adb -f 
+Command       db_write done; 0.922 sec.
+INFO-FLOW: Finish binding canny_Pipeline_idx_idy.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'canny_Pipeline_rest_result' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model canny_Pipeline_rest_result 
+Execute       schedule -model canny_Pipeline_rest_result 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'rest_result'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 4, loop 'rest_result'
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 1.986 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 3.811 seconds; current allocated memory: 1.365 GB.
+Execute       syn_report -verbosereport -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_rest_result.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.107 sec.
+Execute       db_write -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_rest_result.sched.adb -f 
+Command       db_write done; 0.306 sec.
+INFO-FLOW: Finish scheduling canny_Pipeline_rest_result.
+Execute       set_default_model canny_Pipeline_rest_result 
+Execute       bind -model canny_Pipeline_rest_result 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.221 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.635 seconds; current allocated memory: 1.365 GB.
+Execute       syn_report -verbosereport -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_rest_result.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.22 sec.
+Execute       db_write -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_rest_result.bind.adb -f 
+Command       db_write done; 0.387 sec.
+INFO-FLOW: Finish binding canny_Pipeline_rest_result.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'canny' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model canny 
+Execute       schedule -model canny 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.961 sec.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.599 seconds; current allocated memory: 1.365 GB.
+Execute       syn_report -verbosereport -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.verbose.sched.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       db_write -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.sched.adb -f 
+Command       db_write done; 0.261 sec.
+INFO-FLOW: Finish scheduling canny.
+Execute       set_default_model canny 
+Execute       bind -model canny 
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 1.108 sec.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.449 seconds; current allocated memory: 1.365 GB.
+Execute       syn_report -verbosereport -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.verbose.bind.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.822 sec.
+Execute       db_write -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.bind.adb -f 
+Command       db_write done; 0.354 sec.
+INFO-FLOW: Finish binding canny.
+Execute       get_model_list canny -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess canny_Pipeline_read_img 
+Execute       rtl_gen_preprocess canny_Pipeline_idx_idy 
+Execute       rtl_gen_preprocess canny_Pipeline_rest_result 
+Execute       rtl_gen_preprocess canny 
+INFO-FLOW: Model list for RTL generation: canny_Pipeline_read_img canny_Pipeline_idx_idy canny_Pipeline_rest_result canny
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'canny_Pipeline_read_img' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model canny_Pipeline_read_img -top_prefix canny_ -sub_prefix canny_ -mg_file C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_read_img.compgen.tcl 
+INFO: [RTGEN 206-104] Estimated max fanout for 'canny_Pipeline_read_img' is 17029 from HDL expression: (~((ap_start_int == 1'b0) | ((icmp_ln48_fu_8826_p2 == 1'd0) & (src_TVALID == 1'b0))) & (icmp_ln48_fu_8826_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state1))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'canny_Pipeline_read_img'.
+Command       create_rtl_model done; 0.363 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 0 seconds. Elapsed time: 1.591 seconds; current allocated memory: 1.365 GB.
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.rtl_wrap.cfg.tcl 
+Execute       gen_rtl canny_Pipeline_read_img -style xilinx -f -lang vhdl -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/syn/vhdl/canny_canny_Pipeline_read_img 
+Execute       gen_rtl canny_Pipeline_read_img -style xilinx -f -lang vlog -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/syn/verilog/canny_canny_Pipeline_read_img 
+Execute       syn_report -csynth -model canny_Pipeline_read_img -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/syn/report/canny_Pipeline_read_img_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model canny_Pipeline_read_img -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/syn/report/canny_Pipeline_read_img_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model canny_Pipeline_read_img -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_read_img.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.191 sec.
+Execute       db_write -model canny_Pipeline_read_img -f -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_read_img.adb 
+Command       db_write done; 0.452 sec.
+Execute       db_write -model canny_Pipeline_read_img -bindview -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info canny_Pipeline_read_img -p C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_read_img 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'canny_Pipeline_idx_idy' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model canny_Pipeline_idx_idy -top_prefix canny_ -sub_prefix canny_ -mg_file C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_idx_idy.compgen.tcl 
+INFO: [RTGEN 206-104] Estimated max fanout for 'canny_Pipeline_idx_idy' is 16545 from HDL expression: ((1'b1 == ap_CS_fsm_state1) & (ap_start == 1'b1))
+INFO: [RTGEN 206-100] Generating core module 'ama_addmuladd_17s_17s_6ns_17ns_17_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_mul_sub_17s_6ns_17ns_17_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_11s_11s_22s_22_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_17s_6ns_17ns_17_4_1': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_17s_7s_17ns_17_4_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_11s_11s_22_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_17s_6ns_17_4_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_17s_7s_17_4_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_2511_32_1_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_2544_32_1_1': 14 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_315_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_325_32_1_1': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'sdiv_16ns_11s_10_20_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'canny_Pipeline_idx_idy'.
+Command       create_rtl_model done; 1.368 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 3.465 seconds; current allocated memory: 1.365 GB.
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.rtl_wrap.cfg.tcl 
+Execute       gen_rtl canny_Pipeline_idx_idy -style xilinx -f -lang vhdl -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/syn/vhdl/canny_canny_Pipeline_idx_idy 
+Execute       gen_rtl canny_Pipeline_idx_idy -style xilinx -f -lang vlog -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/syn/verilog/canny_canny_Pipeline_idx_idy 
+Execute       syn_report -csynth -model canny_Pipeline_idx_idy -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/syn/report/canny_Pipeline_idx_idy_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.6 sec.
+Execute       syn_report -rtlxml -model canny_Pipeline_idx_idy -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/syn/report/canny_Pipeline_idx_idy_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.276 sec.
+Execute       syn_report -verbosereport -model canny_Pipeline_idx_idy -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_idx_idy.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 1.255 sec.
+Execute       db_write -model canny_Pipeline_idx_idy -f -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_idx_idy.adb 
+Command       db_write done; 1.297 sec.
+Execute       db_write -model canny_Pipeline_idx_idy -bindview -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info canny_Pipeline_idx_idy -p C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_idx_idy 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'canny_Pipeline_rest_result' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model canny_Pipeline_rest_result -top_prefix canny_ -sub_prefix canny_ -mg_file C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_rest_result.compgen.tcl 
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'canny_Pipeline_rest_result' pipeline 'rest_result' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'canny_Pipeline_rest_result' is 5676, found 3 HDL expressions with this fanout: ((1'b1 == ap_CS_fsm_pp0_stage0) & (ap_loop_init == 1'b1)), (1'b0 == ap_block_pp0_stage0_11001), ((ap_enable_reg_pp0_iter2 == 1'b1) & (icmp_ln160_reg_12686 == 1'd0))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'canny_Pipeline_rest_result'.
+Command       create_rtl_model done; 0.319 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 5 seconds. CPU system time: 2 seconds. Elapsed time: 6.754 seconds; current allocated memory: 1.365 GB.
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.rtl_wrap.cfg.tcl 
+Execute       gen_rtl canny_Pipeline_rest_result -style xilinx -f -lang vhdl -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/syn/vhdl/canny_canny_Pipeline_rest_result 
+Execute       gen_rtl canny_Pipeline_rest_result -style xilinx -f -lang vlog -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/syn/verilog/canny_canny_Pipeline_rest_result 
+Execute       syn_report -csynth -model canny_Pipeline_rest_result -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/syn/report/canny_Pipeline_rest_result_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.184 sec.
+Execute       syn_report -rtlxml -model canny_Pipeline_rest_result -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/syn/report/canny_Pipeline_rest_result_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model canny_Pipeline_rest_result -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_rest_result.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.317 sec.
+Execute       db_write -model canny_Pipeline_rest_result -f -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_rest_result.adb 
+Command       db_write done; 0.489 sec.
+Execute       db_write -model canny_Pipeline_rest_result -bindview -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info canny_Pipeline_rest_result -p C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_rest_result 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'canny' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model canny -top_prefix  -sub_prefix canny_ -mg_file C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.compgen.tcl 
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny/src' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny/dst' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny/upperThresh' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'canny/lowerThresh' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'canny' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'upperThresh', 'lowerThresh' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'canny'.
+Command       create_rtl_model done; 0.641 sec.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2 seconds. CPU system time: 1 seconds. Elapsed time: 2.87 seconds; current allocated memory: 1.365 GB.
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.rtl_wrap.cfg.tcl 
+Execute       gen_rtl canny -istop -style xilinx -f -lang vhdl -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/syn/vhdl/canny 
+Execute       gen_rtl canny -istop -style xilinx -f -lang vlog -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/syn/verilog/canny 
+Execute       syn_report -csynth -model canny -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/syn/report/canny_csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       syn_report -rtlxml -model canny -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/syn/report/canny_csynth.xml 
+Execute         get_solution -flow_target
+Execute           get_solution -flow_target 
+Execute       syn_report -verbosereport -model canny -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.verbose.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Command       syn_report done; 0.841 sec.
+Execute       db_write -model canny -f -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.adb 
+Command       db_write done; 0.374 sec.
+Execute       db_write -model canny -bindview -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/design.bindinfo.xml 
+Execute       gen_tb_info canny -p C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny 
+Execute       export_constraint_db -f -tool general -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.constraint.tcl 
+Execute       syn_report -designview -model canny -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.design.xml 
+Command       syn_report done; 0.798 sec.
+Execute       syn_report -csynthDesign -model canny -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/syn/report/csynth.rpt 
+Execute         AP::get_flow_target_display_name
+Execute           get_solution -flow_target 
+Execute       get_config_rtl -disable_wave_debug 
+Execute       syn_report -wcfg -model canny -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_dataflow_ana.wcfg 
+Execute       syn_report -protoinst -model canny -o C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.protoinst 
+Execute       get_config_debug -directory 
+Execute       sc_get_clocks canny 
+Execute       get_config_export -vivado_clock 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       sc_get_portdomain canny 
+INFO-FLOW: Model list for RTL component generation: canny_Pipeline_read_img canny_Pipeline_idx_idy canny_Pipeline_rest_result canny
+INFO-FLOW: Handling components in module [canny_Pipeline_read_img] ... 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_read_img.compgen.tcl 
+INFO-FLOW: Found component canny_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model canny_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [canny_Pipeline_idx_idy] ... 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_idx_idy.compgen.tcl 
+INFO-FLOW: Found component canny_mux_2544_32_1_1.
+INFO-FLOW: Append model canny_mux_2544_32_1_1
+INFO-FLOW: Found component canny_mux_325_32_1_1.
+INFO-FLOW: Append model canny_mux_325_32_1_1
+INFO-FLOW: Found component canny_mux_315_32_1_1.
+INFO-FLOW: Append model canny_mux_315_32_1_1
+INFO-FLOW: Found component canny_mux_2511_32_1_1.
+INFO-FLOW: Append model canny_mux_2511_32_1_1
+INFO-FLOW: Found component canny_sdiv_16ns_11s_10_20_1.
+INFO-FLOW: Append model canny_sdiv_16ns_11s_10_20_1
+INFO-FLOW: Found component canny_mul_mul_17s_7s_17_4_1.
+INFO-FLOW: Append model canny_mul_mul_17s_7s_17_4_1
+INFO-FLOW: Found component canny_mul_mul_17s_6ns_17_4_1.
+INFO-FLOW: Append model canny_mul_mul_17s_6ns_17_4_1
+INFO-FLOW: Found component canny_mac_muladd_17s_7s_17ns_17_4_1.
+INFO-FLOW: Append model canny_mac_muladd_17s_7s_17ns_17_4_1
+INFO-FLOW: Found component canny_mac_muladd_17s_6ns_17ns_17_4_1.
+INFO-FLOW: Append model canny_mac_muladd_17s_6ns_17ns_17_4_1
+INFO-FLOW: Found component canny_mac_mul_sub_17s_6ns_17ns_17_4_1.
+INFO-FLOW: Append model canny_mac_mul_sub_17s_6ns_17ns_17_4_1
+INFO-FLOW: Found component canny_ama_addmuladd_17s_17s_6ns_17ns_17_4_1.
+INFO-FLOW: Append model canny_ama_addmuladd_17s_17s_6ns_17ns_17_4_1
+INFO-FLOW: Found component canny_mul_mul_11s_11s_22_4_1.
+INFO-FLOW: Append model canny_mul_mul_11s_11s_22_4_1
+INFO-FLOW: Found component canny_mac_muladd_11s_11s_22s_22_4_1.
+INFO-FLOW: Append model canny_mac_muladd_11s_11s_22s_22_4_1
+INFO-FLOW: Handling components in module [canny_Pipeline_rest_result] ... 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_rest_result.compgen.tcl 
+INFO-FLOW: Found component canny_flow_control_loop_pipe_sequential_init.
+INFO-FLOW: Append model canny_flow_control_loop_pipe_sequential_init
+INFO-FLOW: Handling components in module [canny] ... 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.compgen.tcl 
+INFO-FLOW: Found component canny_control_s_axi.
+INFO-FLOW: Append model canny_control_s_axi
+INFO-FLOW: Found component canny_regslice_both.
+INFO-FLOW: Append model canny_regslice_both
+INFO-FLOW: Found component canny_regslice_both.
+INFO-FLOW: Append model canny_regslice_both
+INFO-FLOW: Append model canny_Pipeline_read_img
+INFO-FLOW: Append model canny_Pipeline_idx_idy
+INFO-FLOW: Append model canny_Pipeline_rest_result
+INFO-FLOW: Append model canny
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: canny_flow_control_loop_pipe_sequential_init canny_mux_2544_32_1_1 canny_mux_325_32_1_1 canny_mux_315_32_1_1 canny_mux_2511_32_1_1 canny_sdiv_16ns_11s_10_20_1 canny_mul_mul_17s_7s_17_4_1 canny_mul_mul_17s_6ns_17_4_1 canny_mac_muladd_17s_7s_17ns_17_4_1 canny_mac_muladd_17s_6ns_17ns_17_4_1 canny_mac_mul_sub_17s_6ns_17ns_17_4_1 canny_ama_addmuladd_17s_17s_6ns_17ns_17_4_1 canny_mul_mul_11s_11s_22_4_1 canny_mac_muladd_11s_11s_22s_22_4_1 canny_flow_control_loop_pipe_sequential_init canny_control_s_axi canny_regslice_both canny_regslice_both canny_Pipeline_read_img canny_Pipeline_idx_idy canny_Pipeline_rest_result canny
+INFO-FLOW: Generating C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/autopilot.rtl.models.txt file...
+INFO-FLOW: To file: write model canny_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model canny_mux_2544_32_1_1
+INFO-FLOW: To file: write model canny_mux_325_32_1_1
+INFO-FLOW: To file: write model canny_mux_315_32_1_1
+INFO-FLOW: To file: write model canny_mux_2511_32_1_1
+INFO-FLOW: To file: write model canny_sdiv_16ns_11s_10_20_1
+INFO-FLOW: To file: write model canny_mul_mul_17s_7s_17_4_1
+INFO-FLOW: To file: write model canny_mul_mul_17s_6ns_17_4_1
+INFO-FLOW: To file: write model canny_mac_muladd_17s_7s_17ns_17_4_1
+INFO-FLOW: To file: write model canny_mac_muladd_17s_6ns_17ns_17_4_1
+INFO-FLOW: To file: write model canny_mac_mul_sub_17s_6ns_17ns_17_4_1
+INFO-FLOW: To file: write model canny_ama_addmuladd_17s_17s_6ns_17ns_17_4_1
+INFO-FLOW: To file: write model canny_mul_mul_11s_11s_22_4_1
+INFO-FLOW: To file: write model canny_mac_muladd_11s_11s_22s_22_4_1
+INFO-FLOW: To file: write model canny_flow_control_loop_pipe_sequential_init
+INFO-FLOW: To file: write model canny_control_s_axi
+INFO-FLOW: To file: write model canny_regslice_both
+INFO-FLOW: To file: write model canny_regslice_both
+INFO-FLOW: To file: write model canny_Pipeline_read_img
+INFO-FLOW: To file: write model canny_Pipeline_idx_idy
+INFO-FLOW: To file: write model canny_Pipeline_rest_result
+INFO-FLOW: To file: write model canny
+INFO-FLOW: Generating C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/autopilot.rtl.models.tcl file...
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::auto_generate_csynth_design
+Execute       get_top 
+Execute       get_config_export -ipname 
+Execute       get_config_export -xo 
+Execute       get_config_export -format 
+Execute       get_config_rtl -module_auto_prefix 
+INFO-FLOW: DBG:PUTS: read_platform_lib C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/global.setting.tcl
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/common.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/interface.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.117 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.161 sec.
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=4.800 (was NA)
+INFO-FLOW: DBG:PROC: ::AESL_AUTOMG::generate_ip_cores gen_sim_model='1' gen_fp_models='0' gen_for_export='0' dstSCDir='' dstVhdlDir='C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/vhdl' dstVlogDir='C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/vlog' tclDir='C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db' modelList='canny_flow_control_loop_pipe_sequential_init
+canny_mux_2544_32_1_1
+canny_mux_325_32_1_1
+canny_mux_315_32_1_1
+canny_mux_2511_32_1_1
+canny_sdiv_16ns_11s_10_20_1
+canny_mul_mul_17s_7s_17_4_1
+canny_mul_mul_17s_6ns_17_4_1
+canny_mac_muladd_17s_7s_17ns_17_4_1
+canny_mac_muladd_17s_6ns_17ns_17_4_1
+canny_mac_mul_sub_17s_6ns_17ns_17_4_1
+canny_ama_addmuladd_17s_17s_6ns_17ns_17_4_1
+canny_mul_mul_11s_11s_22_4_1
+canny_mac_muladd_11s_11s_22s_22_4_1
+canny_flow_control_loop_pipe_sequential_init
+canny_control_s_axi
+canny_regslice_both
+canny_regslice_both
+canny_Pipeline_read_img
+canny_Pipeline_idx_idy
+canny_Pipeline_rest_result
+canny
+' expOnly='0'
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_read_img.compgen.tcl 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_idx_idy.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg400-1 -data info 
+Command       ap_source done; 1.298 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_rest_result.compgen.tcl 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.compgen.tcl 
+Execute         source ./control.slave.tcl 
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 4 seconds. CPU system time: 0 seconds. Elapsed time: 4.585 seconds; current allocated memory: 1.365 GB.
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::create_csynth_xml bind_info_var='bind_info' RtlSubPrefix='canny_' outfile=''
+INFO-FLOW: Running: create_csynth_xml read xml data
+INFO-FLOW: Done: create_csynth_xml read xml data time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml bind info
+INFO-FLOW: No bind nodes found for module_name canny
+INFO-FLOW: Done: create_csynth_xml bind info time: 0 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml config info
+Execute       get_config_op mul -impl 
+Execute       get_config_op mul -latency 
+Execute       get_config_op mul -precision 
+Execute       get_config_op add -impl 
+Execute       get_config_op add -latency 
+Execute       get_config_op add -precision 
+Execute       get_config_op sub -impl 
+Execute       get_config_op sub -latency 
+Execute       get_config_op sub -precision 
+Execute       get_config_op fadd -impl 
+Execute       get_config_op fadd -latency 
+Execute       get_config_op fadd -precision 
+Execute       get_config_op fsub -impl 
+Execute       get_config_op fsub -latency 
+Execute       get_config_op fsub -precision 
+Execute       get_config_op fdiv -impl 
+Execute       get_config_op fdiv -latency 
+Execute       get_config_op fdiv -precision 
+Execute       get_config_op fexp -impl 
+Execute       get_config_op fexp -latency 
+Execute       get_config_op fexp -precision 
+Execute       get_config_op flog -impl 
+Execute       get_config_op flog -latency 
+Execute       get_config_op flog -precision 
+Execute       get_config_op fmul -impl 
+Execute       get_config_op fmul -latency 
+Execute       get_config_op fmul -precision 
+Execute       get_config_op frsqrt -impl 
+Execute       get_config_op frsqrt -latency 
+Execute       get_config_op frsqrt -precision 
+Execute       get_config_op frecip -impl 
+Execute       get_config_op frecip -latency 
+Execute       get_config_op frecip -precision 
+Execute       get_config_op fsqrt -impl 
+Execute       get_config_op fsqrt -latency 
+Execute       get_config_op fsqrt -precision 
+Execute       get_config_op dadd -impl 
+Execute       get_config_op dadd -latency 
+Execute       get_config_op dadd -precision 
+Execute       get_config_op dsub -impl 
+Execute       get_config_op dsub -latency 
+Execute       get_config_op dsub -precision 
+Execute       get_config_op ddiv -impl 
+Execute       get_config_op ddiv -latency 
+Execute       get_config_op ddiv -precision 
+Execute       get_config_op dexp -impl 
+Execute       get_config_op dexp -latency 
+Execute       get_config_op dexp -precision 
+Execute       get_config_op dlog -impl 
+Execute       get_config_op dlog -latency 
+Execute       get_config_op dlog -precision 
+Execute       get_config_op dmul -impl 
+Execute       get_config_op dmul -latency 
+Execute       get_config_op dmul -precision 
+Execute       get_config_op drsqrt -impl 
+Execute       get_config_op drsqrt -latency 
+Execute       get_config_op drsqrt -precision 
+Execute       get_config_op drecip -impl 
+Execute       get_config_op drecip -latency 
+Execute       get_config_op drecip -precision 
+Execute       get_config_op dsqrt -impl 
+Execute       get_config_op dsqrt -latency 
+Execute       get_config_op dsqrt -precision 
+Execute       get_config_op hadd -impl 
+Execute       get_config_op hadd -latency 
+Execute       get_config_op hadd -precision 
+Execute       get_config_op hsub -impl 
+Execute       get_config_op hsub -latency 
+Execute       get_config_op hsub -precision 
+Execute       get_config_op hdiv -impl 
+Execute       get_config_op hdiv -latency 
+Execute       get_config_op hdiv -precision 
+Execute       get_config_op hmul -impl 
+Execute       get_config_op hmul -latency 
+Execute       get_config_op hmul -precision 
+Execute       get_config_op hsqrt -impl 
+Execute       get_config_op hsqrt -latency 
+Execute       get_config_op hsqrt -precision 
+Execute       get_config_op facc -impl 
+Execute       get_config_op facc -latency 
+Execute       get_config_op facc -precision 
+Execute       get_config_op fmacc -impl 
+Execute       get_config_op fmacc -latency 
+Execute       get_config_op fmacc -precision 
+Execute       get_config_op fmadd -impl 
+Execute       get_config_op fmadd -latency 
+Execute       get_config_op fmadd -precision 
+Execute       get_config_storage fifo -auto_srl_max_bits 
+Execute       get_config_storage fifo -auto_srl_max_depth 
+Execute       get_config_storage fifo -impl 
+Execute       get_solution -flow_target 
+Execute       get_config_array_partition -complete_threshold 
+Execute       get_config_array_partition -throughput_driven 
+Execute       get_config_compile -enable_auto_rewind 
+Execute       get_config_compile -ignore_long_run_time 
+Execute       get_config_compile -name_max_length 
+Execute       get_config_compile -no_signed_zeros 
+Execute       get_config_compile -pipeline_loops 
+Execute       get_config_compile -pipeline_style 
+Execute       get_config_compile -pragma_strict_mode 
+Execute       get_config_compile -pre_tcl 
+Execute       get_config_compile -unsafe_math_optimizations 
+Execute       get_config_dataflow -default_channel 
+Execute       get_config_dataflow -disable_fifo_sizing_opt 
+Execute       get_config_dataflow -fifo_depth 
+Execute       get_config_dataflow -override_user_fifo_depth 
+Execute       get_config_dataflow -scalar_fifo_depth 
+Execute       get_config_dataflow -start_fifo_depth 
+Execute       get_config_dataflow -strict_mode 
+Execute       get_config_dataflow -strict_stable_sync 
+Execute       get_config_dataflow -task_level_fifo_depth 
+Execute       get_config_debug -directory 
+Execute       get_config_debug -enable 
+Execute       get_config_export -description 
+Execute       get_config_export -display_name 
+Execute       get_config_export -format 
+Execute       get_config_export -ip_xdc_file 
+Execute       get_config_export -ip_xdc_ooc_file 
+Execute       get_config_export -ipname 
+Execute       get_config_export -library 
+Execute       get_config_export -output 
+Execute       get_config_export -rtl 
+Execute       get_config_export -taxonomy 
+Execute       get_config_export -vendor 
+Execute       get_config_export -version 
+Execute       get_config_export -vivado_clock 
+Execute       get_config_export -vivado_impl_strategy 
+Execute       get_config_export -vivado_max_timing_paths 
+Execute       get_config_export -vivado_optimization_level 
+Execute       get_config_export -vivado_pblock 
+Execute       get_config_export -vivado_phys_opt 
+Execute       get_config_export -vivado_report_level 
+Execute       get_config_export -vivado_synth_design_args 
+Execute       get_config_export -vivado_synth_strategy 
+Execute       get_config_interface -clock_enable 
+Execute       get_config_interface -default_slave_interface 
+Execute       get_config_interface -m_axi_addr64 
+Execute       get_config_interface -m_axi_alignment_byte_size 
+Execute       get_config_interface -m_axi_auto_max_ports 
+Execute       get_config_interface -m_axi_buffer_impl 
+Execute       get_config_interface -m_axi_conservative_mode 
+Execute       get_config_interface -m_axi_flush_mode 
+Execute       get_config_interface -m_axi_latency 
+Execute       get_config_interface -m_axi_max_bitwidth 
+Execute       get_config_interface -m_axi_max_read_burst_length 
+Execute       get_config_interface -m_axi_max_widen_bitwidth 
+Execute       get_config_interface -m_axi_max_write_burst_length 
+Execute       get_config_interface -m_axi_min_bitwidth 
+Execute       get_config_interface -m_axi_num_read_outstanding 
+Execute       get_config_interface -m_axi_num_write_outstanding 
+Execute       get_config_interface -m_axi_offset 
+Execute       get_config_interface -register_io 
+Execute       get_config_interface -s_axilite_auto_restart_counter 
+Execute       get_config_interface -s_axilite_data64 
+Execute       get_config_interface -s_axilite_interrupt_mode 
+Execute       get_config_interface -s_axilite_mailbox 
+Execute       get_config_interface -s_axilite_status_regs 
+Execute       get_config_interface -s_axilite_sw_reset 
+Execute       get_config_rtl -deadlock_detection 
+Execute       get_config_rtl -header 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -mult_keep_attribute 
+Execute       get_config_rtl -register_all_io 
+Execute       get_config_rtl -register_reset_num 
+Execute       get_config_rtl -reset 
+Execute       get_config_rtl -reset_async 
+Execute       get_config_rtl -reset_level 
+Execute       get_config_schedule -enable_dsp_full_reg 
+Execute       get_config_unroll -tripcount_threshold 
+INFO-FLOW: Done: create_csynth_xml config info time: 0.2 seconds per iteration
+INFO-FLOW: Running: create_csynth_xml write xml
+INFO-FLOW: Done: create_csynth_xml write xml time: 0 seconds per iteration
+INFO-FLOW: DBG:PUTS:      create_csynth_xml wrote csynth_xml=C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/syn/report/csynth.xml
+INFO-FLOW: DBG:PROC: ::AP::DESIGN_DATA::generate_json generate_bd_files='0' generate_xo_files='0' modelList='canny_flow_control_loop_pipe_sequential_init
+canny_mux_2544_32_1_1
+canny_mux_325_32_1_1
+canny_mux_315_32_1_1
+canny_mux_2511_32_1_1
+canny_sdiv_16ns_11s_10_20_1
+canny_mul_mul_17s_7s_17_4_1
+canny_mul_mul_17s_6ns_17_4_1
+canny_mac_muladd_17s_7s_17ns_17_4_1
+canny_mac_muladd_17s_6ns_17ns_17_4_1
+canny_mac_mul_sub_17s_6ns_17ns_17_4_1
+canny_ama_addmuladd_17s_17s_6ns_17ns_17_4_1
+canny_mul_mul_11s_11s_22_4_1
+canny_mac_muladd_11s_11s_22s_22_4_1
+canny_flow_control_loop_pipe_sequential_init
+canny_control_s_axi
+canny_regslice_both
+canny_regslice_both
+canny_Pipeline_read_img
+canny_Pipeline_idx_idy
+canny_Pipeline_rest_result
+canny
+' rtl_lang='both' bootstrap_tcl='false' outdir='' outfilename=''
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_solution -flow_target 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/top-io-be.tcl 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.compgen.dataonly.tcl 
+Execute       get_config_interface -s_axilite_interrupt_mode 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.compgen.dataonly.tcl 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.rtl_wrap.cfg.tcl 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.compgen.dataonly.tcl 
+Execute       get_config_export -format 
+Execute       get_config_export -vendor 
+Execute       get_config_export -library 
+Execute       get_config_export -version 
+Execute       get_config_export -ipname 
+Execute       get_config_export -taxonomy 
+Execute       get_config_export -description 
+Execute       get_config_export -display_name 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_read_img.tbgen.tcl 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_idx_idy.tbgen.tcl 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny_Pipeline_rest_result.tbgen.tcl 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute       get_solution -flow_target 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.constraint.tcl 
+Execute       sc_get_clocks canny 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -ip_xdc_file 
+Execute       get_config_export -ip_xdc_ooc_file 
+Execute       get_config_debug -directory 
+INFO-FLOW: DBG:PROC: ::HLSREPORTS::add_csynth_report_sections bind_info_dict='adapter_nodes {{BINDTYPE adapter DISPLAY {bind_adapter axilite} ID {} IMPL {} LATENCY {} OPTYPE {} PRAGMA yes RTLNAME control_s_axi_U SOURCE {} VARIABLE {} MODULE canny LOOP {} BUNDLEDNAME control DSP 0 BRAM 0 URAM 0}} report_dict {TOPINST canny MODULE2INSTS {canny canny canny_Pipeline_read_img grp_canny_Pipeline_read_img_fu_3664 canny_Pipeline_idx_idy grp_canny_Pipeline_idx_idy_fu_4186 canny_Pipeline_rest_result grp_canny_Pipeline_rest_result_fu_5097} INST2MODULE {canny canny grp_canny_Pipeline_read_img_fu_3664 canny_Pipeline_read_img grp_canny_Pipeline_idx_idy_fu_4186 canny_Pipeline_idx_idy grp_canny_Pipeline_rest_result_fu_5097 canny_Pipeline_rest_result} INSTDATA {canny {DEPTH 1 CHILDREN {grp_canny_Pipeline_read_img_fu_3664 grp_canny_Pipeline_idx_idy_fu_4186 grp_canny_Pipeline_rest_result_fu_5097}} grp_canny_Pipeline_read_img_fu_3664 {DEPTH 2 CHILDREN {}} grp_canny_Pipeline_idx_idy_fu_4186 {DEPTH 2 CHILDREN {}} grp_canny_Pipeline_rest_result_fu_5097 {DEPTH 2 CHILDREN {}}} MODULEDATA {canny_Pipeline_read_img {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln48_fu_8832_p2 SOURCE canny.cpp:48 VARIABLE add_ln48 LOOP read_img BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} canny_Pipeline_idx_idy {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_17_fu_14275_p2 SOURCE {} VARIABLE empty_17 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME empty_18_fu_14059_p2 SOURCE {} VARIABLE empty_18 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME conv2_i_i437_fu_14288_p2 SOURCE {} VARIABLE conv2_i_i437 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME lhs_fu_16183_p2 SOURCE {} VARIABLE lhs LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_19_fu_14065_p2 SOURCE {} VARIABLE empty_19 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME lhs_1_fu_14329_p2 SOURCE {} VARIABLE lhs_1 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME i_3_fu_14079_p2 SOURCE {} VARIABLE i_3 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME lhs_2_fu_14349_p2 SOURCE {} VARIABLE lhs_2 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME empty_20_fu_14107_p2 SOURCE {} VARIABLE empty_20 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME idx_V_4_fu_14121_p2 SOURCE {} VARIABLE idx_V_4 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME lhs_3_fu_14369_p2 SOURCE {} VARIABLE lhs_3 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln59_4_fu_14141_p2 SOURCE canny.cpp:59 VARIABLE add_ln59_4 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME p_mid134_fu_14186_p2 SOURCE {} VARIABLE p_mid134 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME conv2_i_i437_mid1_fu_14382_p2 SOURCE {} VARIABLE conv2_i_i437_mid1 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME lhs_mid1_fu_16206_p2 SOURCE {} VARIABLE lhs_mid1 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME lhs_1_mid1_fu_14430_p2 SOURCE {} VARIABLE lhs_1_mid1 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME lhs_2_mid1_fu_14457_p2 SOURCE {} VARIABLE lhs_2_mid1 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME p_mid138_fu_14206_p2 SOURCE {} VARIABLE p_mid138 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME idx_V_4_mid1_fu_14220_p2 SOURCE {} VARIABLE idx_V_4_mid1 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME lhs_3_mid1_fu_14496_p2 SOURCE {} VARIABLE lhs_3_mid1 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln59_fu_19118_p2 SOURCE canny.cpp:59 VARIABLE add_ln59 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln59_1_fu_19127_p2 SOURCE canny.cpp:59 VARIABLE add_ln59_1 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln59_2_fu_16222_p2 SOURCE canny.cpp:59 VARIABLE add_ln59_2 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln59_3_fu_16227_p2 SOURCE canny.cpp:59 VARIABLE add_ln59_3 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln79_fu_14512_p2 SOURCE canny.cpp:79 VARIABLE add_ln79 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln80_fu_14236_p2 SOURCE canny.cpp:80 VARIABLE sub_ln80 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln260_fu_14525_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260} VARIABLE add_ln260 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1541_fu_19136_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541} VARIABLE add_ln1541 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln886_fu_20204_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE sub_ln886 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln79_1_fu_14542_p2 SOURCE canny.cpp:79 VARIABLE add_ln79_1 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1541_1_fu_16235_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541} VARIABLE add_ln1541_1 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_17s_7s_17ns_17_4_1_U557 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE mul_ln886 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mul_mul_17s_7s_17_4_1_U550 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE mul_ln886_1 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln79_2_fu_14242_p2 SOURCE canny.cpp:79 VARIABLE add_ln79_2 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1541_2_fu_16254_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541} VARIABLE add_ln1541_2 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_17s_7s_17ns_17_4_1_U551 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE mul_ln886_2 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln79_3_fu_14580_p2 SOURCE canny.cpp:79 VARIABLE add_ln79_3 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln260_fu_14593_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260} VARIABLE sub_ln260 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1541_3_fu_19305_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541} VARIABLE add_ln1541_3 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME grp_fu_23937_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE sub_ln886_1 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln886_2_fu_20461_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE sub_ln886_2 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1541_4_fu_19353_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541} VARIABLE add_ln1541_4 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_17s_7s_17ns_17_4_1_U552 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE mul_ln886_3 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln886_3_fu_20231_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE sub_ln886_3 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1541_5_fu_16263_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541} VARIABLE add_ln1541_5 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mul_mul_17s_7s_17_4_1_U543 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE mul_ln886_4 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1541_6_fu_16331_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541} VARIABLE add_ln1541_6 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mul_mul_17s_6ns_17_4_1_U544 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE mul_ln886_5 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_17s_7s_17ns_17_4_1_U545 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE mul_ln886_6 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1541_7_fu_19452_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541} VARIABLE add_ln1541_7 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_17s_6ns_17ns_17_4_1_U553 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE mul_ln886_7 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln886_10_fu_20269_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE sub_ln886_10 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_17s_7s_17ns_17_4_1_U546 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE mul_ln886_8 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln260_1_fu_16412_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:260} VARIABLE sub_ln260_1 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_17s_6ns_17ns_17_4_1_U558 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE mul_ln886_9 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1541_8_fu_14614_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541} VARIABLE add_ln1541_8 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mul_mul_17s_7s_17_4_1_U547 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE mul_ln886_10 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln886_8_fu_19768_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE sub_ln886_8 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1541_9_fu_16491_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541} VARIABLE add_ln1541_9 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_17s_7s_17ns_17_4_1_U554 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE mul_ln886_11 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1541_10_fu_16496_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541} VARIABLE add_ln1541_10 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_17s_6ns_17ns_17_4_1_U548 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE mul_ln886_12 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1541_11_fu_16501_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541} VARIABLE add_ln1541_11 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_mul_sub_17s_6ns_17ns_17_4_1_U549 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE mul_ln886_13 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1541_12_fu_16506_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541} VARIABLE add_ln1541_12 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln886_11_fu_20328_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE sub_ln886_11 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1541_13_fu_16511_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541} VARIABLE add_ln1541_13 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_17s_6ns_17ns_17_4_1_U559 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE mul_ln886_14 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mul_mul_17s_6ns_17_4_1_U555 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE mul_ln886_15 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1541_14_fu_16517_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541} VARIABLE add_ln1541_14 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln886_12_fu_20341_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE sub_ln886_12 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_17s_6ns_17ns_17_4_1_U560 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE mul_ln886_16 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln1541_15_fu_16522_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1541} VARIABLE add_ln1541_15 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME sub_ln886_13_fu_20360_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE sub_ln886_13 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME newFirst550_fu_20366_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:1540} VARIABLE newFirst550 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE sub PRAGMA {} RTLNAME newFirst552_fu_20370_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE newFirst552 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_17s_7s_17ns_17_4_1_U552 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE add_ln886_3 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_17s_6ns_17ns_17_4_1_U553 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE add_ln886_4 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_17s_7s_17ns_17_4_1_U546 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE add_ln886_8 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_17s_7s_17ns_17_4_1_U554 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE add_ln886_9 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_17s_6ns_17ns_17_4_1_U558 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE add_ln886_10 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE sub PRAGMA {} RTLNAME mac_mul_sub_17s_6ns_17ns_17_4_1_U549 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE newFirst546 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op sub}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_17s_6ns_17ns_17_4_1_U548 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE newSecond547 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln886_12_fu_20476_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE add_ln886_12 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_17s_6ns_17ns_17_4_1_U560 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE add_ln886_17 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_17s_6ns_17ns_17_4_1_U559 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE add_ln886_19 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln886_20_fu_20511_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE add_ln886_20 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_17s_7s_17ns_17_4_1_U545 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE add_ln886_21 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME ama_addmuladd_17s_17s_6ns_17ns_17_4_1_U556 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE add_ln886_22 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME ama_addmuladd_17s_17s_6ns_17ns_17_4_1_U556 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE mul_ln886_17 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME ama_addmuladd_17s_17s_6ns_17ns_17_4_1_U556 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE add_ln886_23 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln886_24_fu_20489_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE add_ln886_24 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln886_26_fu_20376_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE add_ln886_26 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_17s_7s_17ns_17_4_1_U557 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE add_ln886_27 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln886_28_fu_20515_p2 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE add_ln886_28 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_17s_7s_17ns_17_4_1_U551 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int_base.h:886} VARIABLE add_ln886_30 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mac_muladd_11s_11s_22s_22_4_1_U562 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int.h:75} VARIABLE mul_ln75 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE mul PRAGMA {} RTLNAME mul_mul_11s_11s_22_4_1_U561 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int.h:75} VARIABLE mul_ln75_1 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op mul}} {BINDTYPE op ID {} IMPL dsp48 LATENCY 3 OPTYPE add PRAGMA {} RTLNAME mac_muladd_11s_11s_22s_22_4_1_U562 SOURCE {C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_int.h:75} VARIABLE G_V_516 LOOP idx_idy BUNDLEDNAME {} DSP 1 BRAM 0 URAM 0 DISPNAME {bind_op add}} {BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln154_fu_14620_p2 SOURCE canny.cpp:154 VARIABLE add_ln154 LOOP idx_idy BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 20 BRAM 0 URAM 0}} canny_Pipeline_rest_result {BINDINFO {{BINDTYPE op ID {} IMPL fabric LATENCY 0 OPTYPE add PRAGMA {} RTLNAME add_ln160_fu_7139_p2 SOURCE canny.cpp:160 VARIABLE add_ln160 LOOP rest_result BUNDLEDNAME {} DSP 0 BRAM 0 URAM 0 DISPNAME {bind_op add}}} AREA {DSP 0 BRAM 0 URAM 0}} canny {AREA {DSP 20 BRAM 0 URAM 0}}}}'
+INFO-FLOW: DBG:PUTS:      update_csynth_reports json2rpt_hw_sw_interfaces
+INFO-FLOW: Running: gen_csynth_sec_pragma
+INFO-FLOW: Done: gen_csynth_sec_pragma time: 0.2 seconds per iteration
+INFO-FLOW: DBG:PUTS:      update_csynth_reports wrote xml
+INFO-FLOW: DBG:PUTS:      update_csynth_reports appended to csynth rpt file
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1 seconds. CPU system time: 1 seconds. Elapsed time: 1.583 seconds; current allocated memory: 1.365 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for canny.
+INFO: [VLOG 209-307] Generating Verilog RTL for canny.
+Execute       syn_report -model canny -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 210.44 MHz
+Command     autosyn done; 50.421 sec.
+Command   csynth_design done; 116.536 sec.
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 59 seconds. CPU system time: 6 seconds. Elapsed time: 116.536 seconds; current allocated memory: 0.000 MB.
+Command ap_source done; 121.07 sec.
+Execute cleanup_all 
+Command cleanup_all done; 0.177 sec.
+INFO-FLOW: Workspace C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1 opened at Sun Nov 13 22:12:30 +0800 2022
+Execute     ap_set_clock -name default -period 4.8 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4.8ns.
+Execute     ap_set_clock -name default -uncertainty 0 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+Execute     set_part xc7z020-clg400-1 
+Execute       create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2022.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2022.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 3.466 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.117 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.161 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 3.697 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vitis 
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_rtl -register_reset_num 
+Execute     send_msg_by_id INFO @200-1464@%s config_interface -m_axi_latency=64 
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+Execute     config_interface -m_axi_latency=64 
+Execute     send_msg_by_id INFO @200-1464@%s config_interface -m_axi_alignment_byte_size=64 
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+Execute     config_interface -m_axi_alignment_byte_size=64 
+Execute     send_msg_by_id INFO @200-1464@%s config_interface -m_axi_max_widen_bitwidth=512 
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+Execute     config_interface -m_axi_max_widen_bitwidth=512 
+Execute     send_msg_by_id INFO @200-1464@%s config_interface -default_interface=kernel 
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+Execute     config_interface -default_interface=kernel 
+Execute     send_msg_by_id INFO @200-1464@%s config_rtl -register_reset_num=3 
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+Execute     config_rtl -register_reset_num=3 
+Command   open_solution done; 3.746 sec.
+Execute   set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+Execute     create_platform xc7z020-clg400-1 -board  
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.107 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.148 sec.
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.274 sec.
+Execute   create_clock -period 4.8 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 4.8 -name default 
+Execute   config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+Execute   config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+Execute   set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+Execute   source ./canny/solution1/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./canny/solution1/directives.tcl
+Execute     set_directive_top -name canny canny 
+INFO: [HLS 200-1510] Running: set_directive_top -name canny canny 
+Execute     set_directive_pipeline canny/NonMaxSup_y 
+INFO: [HLS 200-1510] Running: set_directive_pipeline canny/NonMaxSup_y 
+Execute     set_directive_unroll canny/gradient_theta_shift 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/gradient_theta_shift 
+Execute     set_directive_unroll canny/canny_label0 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label0 
+Execute     set_directive_unroll canny/canny_label1 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label1 
+Execute     set_directive_unroll canny/canny_label2 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label2 
+Execute     set_directive_unroll canny/canny_label3 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label3 
+Execute     set_directive_unroll canny/canny_label4 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label4 
+Execute     set_directive_unroll canny/canny_label5 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label5 
+Execute     set_directive_unroll canny/canny_label6 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label6 
+Execute     set_directive_unroll canny/canny_label7 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label7 
+Execute     set_directive_unroll canny/canny_label8 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label8 
+Execute     set_directive_unroll canny/canny_label9 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label9 
+Execute     set_directive_unroll canny/canny_label10 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label10 
+Execute     set_directive_unroll canny/canny_label11 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label11 
+Execute     set_directive_unroll canny/canny_label12 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label12 
+Execute     set_directive_unroll canny/canny_label13 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label13 
+Execute     set_directive_unroll canny/canny_label14 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label14 
+Execute     set_directive_unroll canny/canny_label15 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label15 
+Execute     set_directive_unroll canny/canny_label16 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label16 
+Execute     set_directive_unroll canny/canny_label17 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label17 
+Execute     set_directive_unroll canny/canny_label18 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label18 
+Execute     set_directive_unroll canny/canny_label19 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label19 
+Execute     set_directive_unroll canny/canny_label20 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label20 
+Execute     set_directive_unroll canny/canny_label21 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label21 
+Execute     set_directive_unroll canny/canny_label22 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label22 
+Execute     set_directive_unroll canny/canny_label23 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label23 
+Execute     set_directive_unroll canny/canny_label24 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label24 
+Execute     set_directive_unroll canny/canny_label25 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label25 
+Execute     set_directive_unroll canny/canny_label26 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label26 
+Execute     set_directive_unroll canny/canny_label27 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label27 
+Execute     set_directive_unroll canny/canny_label28 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label28 
+Execute     set_directive_unroll canny/canny_label29 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label29 
+Execute     set_directive_unroll canny/canny_label30 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label30 
+Execute     set_directive_unroll canny/canny_label31 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label31 
+Execute     set_directive_unroll canny/canny_label32 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label32 
+Execute     set_directive_unroll canny/canny_label33 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label33 
+Execute     set_directive_unroll canny/canny_label34 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label34 
+Execute     set_directive_unroll canny/canny_label35 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label35 
+Execute     set_directive_unroll canny/canny_label36 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label36 
+Execute     set_directive_unroll canny/canny_label37 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label37 
+Execute     set_directive_unroll canny/canny_label38 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label38 
+Execute     set_directive_unroll canny/canny_label39 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label39 
+Execute     set_directive_unroll canny/canny_label40 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label40 
+Execute     set_directive_unroll canny/canny_label41 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label41 
+Command   ap_source done; 0.201 sec.
+Execute   cosim_design -trace_level all 
+INFO: [HLS 200-1510] Running: cosim_design -trace_level all 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/global.setting.tcl
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/interface.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.107 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.148 sec.
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=4.800 (was NA)
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.rtl_wrap.cfg.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+ERROR: [COSIM 212-366] Cannot delete directory  'sim/verilog': it is being used by another program. Please close the program and try again.
+ERROR: [COSIM 212-5] *** C/RTL co-simulation file generation failed. ***
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+INFO-FLOW: Caught error in cosim_design: 
+    while executing
+"ap_internal_cosim_design "
+Command   cosim_design done; error code: 2; 1.288 sec.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 1 seconds. CPU system time: 0 seconds. Elapsed time: 1.289 seconds; current allocated memory: 0.000 MB.
+Command ap_source done; error code: 1; 5.579 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1 opened at Sun Nov 13 22:16:32 +0800 2022
+Execute     ap_set_clock -name default -period 4.8 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4.8ns.
+Execute     ap_set_clock -name default -uncertainty 0 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 0ns.
+Execute     set_part xc7z020-clg400-1 
+Execute       create_platform xc7z020-clg400-1 -board  
+DBG:HLSDevice: Trying to load device library: C:/Xilinx/Vitis_HLS/2022.1\lib\win64.o\librdi_hlsvwrap.dll
+DBG:HLSDevice: first parts/arch.xml in RDI_DATADIR: C:/Xilinx/Vivado/2022.1/data/parts/arch.xml
+DBG:HLSDevice: init success
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+Command       create_platform done; 3.48 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute           source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Command         ap_source done; 0.119 sec.
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command       ap_source done; 0.161 sec.
+Execute       ap_part_info -name xc7z020-clg400-1 -data info 
+Execute       config_compile -quiet -complex-mul-dsp=0 
+Command     set_part done; 3.716 sec.
+Execute     send_msg_by_id INFO @200-1505@%s%s  vitis 
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Execute     get_config_interface -m_axi_latency 
+Execute     get_config_interface -m_axi_alignment_byte_size 
+Execute     get_config_interface -m_axi_max_widen_bitwidth 
+Execute     get_config_interface -default_interface 
+Execute     get_config_rtl -register_reset_num 
+Execute     send_msg_by_id INFO @200-1464@%s config_interface -m_axi_latency=64 
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_latency=64
+Execute     config_interface -m_axi_latency=64 
+Execute     send_msg_by_id INFO @200-1464@%s config_interface -m_axi_alignment_byte_size=64 
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_alignment_byte_size=64
+Execute     config_interface -m_axi_alignment_byte_size=64 
+Execute     send_msg_by_id INFO @200-1464@%s config_interface -m_axi_max_widen_bitwidth=512 
+INFO: [HLS 200-1464] Running solution command: config_interface -m_axi_max_widen_bitwidth=512
+Execute     config_interface -m_axi_max_widen_bitwidth=512 
+Execute     send_msg_by_id INFO @200-1464@%s config_interface -default_interface=kernel 
+INFO: [HLS 200-1464] Running solution command: config_interface -default_interface=kernel
+Execute     config_interface -default_interface=kernel 
+Execute     send_msg_by_id INFO @200-1464@%s config_rtl -register_reset_num=3 
+INFO: [HLS 200-1464] Running solution command: config_rtl -register_reset_num=3
+Execute     config_rtl -register_reset_num=3 
+Command   open_solution done; 3.767 sec.
+Execute   set_part xc7z020-clg400-1 
+INFO: [HLS 200-1510] Running: set_part xc7z020-clg400-1 
+Execute     create_platform xc7z020-clg400-1 -board  
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.108 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.147 sec.
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     config_compile -quiet -complex-mul-dsp=0 
+Command   set_part done; 0.284 sec.
+Execute   create_clock -period 4.8 -name default 
+INFO: [HLS 200-1510] Running: create_clock -period 4.8 -name default 
+Execute   config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_alignment_byte_size 64 -m_axi_latency 64 -m_axi_max_widen_bitwidth 512 
+Execute   config_rtl -register_reset_num 3 
+INFO: [HLS 200-1510] Running: config_rtl -register_reset_num 3 
+Execute   set_clock_uncertainty 0 
+INFO: [HLS 200-1510] Running: set_clock_uncertainty 0 
+Execute   source ./canny/solution1/directives.tcl 
+INFO: [HLS 200-1510] Running: source ./canny/solution1/directives.tcl
+Execute     set_directive_top -name canny canny 
+INFO: [HLS 200-1510] Running: set_directive_top -name canny canny 
+Execute     set_directive_pipeline canny/NonMaxSup_y 
+INFO: [HLS 200-1510] Running: set_directive_pipeline canny/NonMaxSup_y 
+Execute     set_directive_unroll canny/gradient_theta_shift 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/gradient_theta_shift 
+Execute     set_directive_unroll canny/canny_label0 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label0 
+Execute     set_directive_unroll canny/canny_label1 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label1 
+Execute     set_directive_unroll canny/canny_label2 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label2 
+Execute     set_directive_unroll canny/canny_label3 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label3 
+Execute     set_directive_unroll canny/canny_label4 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label4 
+Execute     set_directive_unroll canny/canny_label5 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label5 
+Execute     set_directive_unroll canny/canny_label6 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label6 
+Execute     set_directive_unroll canny/canny_label7 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label7 
+Execute     set_directive_unroll canny/canny_label8 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label8 
+Execute     set_directive_unroll canny/canny_label9 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label9 
+Execute     set_directive_unroll canny/canny_label10 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label10 
+Execute     set_directive_unroll canny/canny_label11 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label11 
+Execute     set_directive_unroll canny/canny_label12 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label12 
+Execute     set_directive_unroll canny/canny_label13 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label13 
+Execute     set_directive_unroll canny/canny_label14 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label14 
+Execute     set_directive_unroll canny/canny_label15 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label15 
+Execute     set_directive_unroll canny/canny_label16 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label16 
+Execute     set_directive_unroll canny/canny_label17 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label17 
+Execute     set_directive_unroll canny/canny_label18 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label18 
+Execute     set_directive_unroll canny/canny_label19 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label19 
+Execute     set_directive_unroll canny/canny_label20 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label20 
+Execute     set_directive_unroll canny/canny_label21 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label21 
+Execute     set_directive_unroll canny/canny_label22 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label22 
+Execute     set_directive_unroll canny/canny_label23 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label23 
+Execute     set_directive_unroll canny/canny_label24 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label24 
+Execute     set_directive_unroll canny/canny_label25 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label25 
+Execute     set_directive_unroll canny/canny_label26 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label26 
+Execute     set_directive_unroll canny/canny_label27 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label27 
+Execute     set_directive_unroll canny/canny_label28 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label28 
+Execute     set_directive_unroll canny/canny_label29 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label29 
+Execute     set_directive_unroll canny/canny_label30 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label30 
+Execute     set_directive_unroll canny/canny_label31 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label31 
+Execute     set_directive_unroll canny/canny_label32 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label32 
+Execute     set_directive_unroll canny/canny_label33 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label33 
+Execute     set_directive_unroll canny/canny_label34 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label34 
+Execute     set_directive_unroll canny/canny_label35 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label35 
+Execute     set_directive_unroll canny/canny_label36 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label36 
+Execute     set_directive_unroll canny/canny_label37 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label37 
+Execute     set_directive_unroll canny/canny_label38 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label38 
+Execute     set_directive_unroll canny/canny_label39 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label39 
+Execute     set_directive_unroll canny/canny_label40 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label40 
+Execute     set_directive_unroll canny/canny_label41 
+INFO: [HLS 200-1510] Running: set_directive_unroll canny/canny_label41 
+Command   ap_source done; 0.185 sec.
+Execute   cosim_design -trace_level all 
+INFO: [HLS 200-1510] Running: cosim_design -trace_level all 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:PUTS: read_platform_lib C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/global.setting.tcl
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/common.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/generic/autopilot/interface.gen 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/common/xilinx.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/plb46.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/axi4.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute         source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/saxilite.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/dds_compiler.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/util.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfft.gen 
+Command       ap_source done; 0.106 sec.
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/ip/xfir.gen 
+Execute       source C:/Xilinx/Vitis_HLS/2022.1/common/technology/xilinx/DSP48/dsp48.gen 
+Command     ap_source done; 0.15 sec.
+INFO-FLOW: DBG:PUTS:   using AESL_AUTOCG::g_clock_period=4.800 (was NA)
+Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.rtl_wrap.cfg.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: TB processing: C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny_test.cpp C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/./sim/autowrap/testbench/canny_test.cpp_pre.cpp
+Execute     clang_tidy xilinx-tb-process -desc tb-process C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/./sim/autowrap/testbench/canny_test.cpp_pre.cpp.tb.cpp std=c++14 
+INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/./sim/autowrap/testbench/canny_test.cpp_pre.cpp.tb.cpp -- -std=c++14 -fhls -ferror-limit=0
+Command     clang_tidy done; 0.446 sec.
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+INFO-FLOW: TB processing: C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny.cpp C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/./sim/autowrap/testbench/canny.cpp_pre.cpp
+Execute     clang_tidy xilinx-tb-process -desc tb-process C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/./sim/autowrap/testbench/canny.cpp_pre.cpp.tb.cpp std=c++14 
+INFO-FLOW: exec C:/Xilinx/Vitis_HLS/2022.1/win64/tools/clang-3.9-csynth/bin/clang-tidy -header-filter=.* --checks=-*,xilinx-tb-process -fix-errors C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/./sim/autowrap/testbench/canny.cpp_pre.cpp.tb.cpp -- -std=c++14 -fhls -ferror-limit=0
+Command     clang_tidy done; 2.883 sec.
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.rtl_wrap.cfg.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.rtl_wrap.cfg.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.rtl_wrap.cfg.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+Execute     source .run_sim.tcl 
+INFO: [COSIM 212-302] Starting C TB testing ... 
+Command     ap_source done; 1.16 sec.
+INFO: [COSIM 212-333] Generating C post check test bench ...
+Execute     ap_part_info -name xc7z020-clg400-1 -data info 
+INFO: [COSIM 212-12] Generating RTL test bench ...
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     source ../tv/cdatafile/ref.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+Execute     source C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/.autopilot/db/canny.tbgen.tcl 
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+Execute     source .run_sim.tcl 
+Execute       source check_sim.tcl 
+Execute       source dataflow_monitor_API.tcl 
+Execute       source .sim.status.tcl 
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+INFO: [COSIM 212-316] Starting C post checking ...
+Command     ap_source done; 89.805 sec.
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
+Command   cosim_design done; 110.113 sec.
+INFO: [HLS 200-111] Finished Command cosim_design CPU user time: 4 seconds. CPU system time: 1 seconds. Elapsed time: 110.113 seconds; current allocated memory: 0.000 MB.
+Command ap_source done; 114.436 sec.
+Execute cleanup_all 

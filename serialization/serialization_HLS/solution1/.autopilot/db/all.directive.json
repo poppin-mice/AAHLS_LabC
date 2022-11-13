@@ -1,0 +1,85 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "dut",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "C:\/Users\/edan\/Desktop\/serialization\/serialization_HLS\/solution1\/directives.tcl",
+          "sourceLine": "6",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "dut"
+              }]
+          }
+        },
+        {
+          "functionName": "dut",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "C:\/Users\/edan\/Desktop\/serialization\/serialization_HLS\/solution1\/directives.tcl",
+          "sourceLine": "7",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "m_axi",
+                "value": ""
+              },
+              {
+                "name": "depth",
+                "value": "120000"
+              },
+              {
+                "name": "port",
+                "value": "src_buff"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "dut",
+          "label": "",
+          "functionLabel": "",
+          "id": "3",
+          "sourceFile": "C:\/Users\/edan\/Desktop\/serialization\/serialization_HLS\/solution1\/directives.tcl",
+          "sourceLine": "8",
+          "pragma": {
+            "name": "INTERFACE",
+            "option": [
+              {
+                "name": "m_axi",
+                "value": ""
+              },
+              {
+                "name": "depth",
+                "value": "120000"
+              },
+              {
+                "name": "port",
+                "value": "dst_buff"
+              }
+            ]
+          }
+        },
+        {
+          "functionName": "dut",
+          "label": "",
+          "functionLabel": "",
+          "id": "4",
+          "sourceFile": "C:\/Users\/edan\/Desktop\/serialization\/serialization_HLS\/solution1\/csynth.tcl",
+          "sourceLine": "22",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "dut"
+              }]
+          }
+        }
+      ]
+    }]}

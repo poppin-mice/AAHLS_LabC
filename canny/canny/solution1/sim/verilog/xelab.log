@@ -1,0 +1,128 @@
+Vivado Simulator v2022.1
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.1/bin/unwrapped/win64.o/xelab.exe xil_defaultlib.apatb_canny_top glbl -Oenable_linking_all_libraries -prj canny.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_0_20 -L floating_point_v7_1_14 --lib ieee_proposed=./ieee_proposed -s canny -debug wave 
+Multi-threading is on. Using 6 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/AESL_axi_slave_control.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_control
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/AESL_axi_s_dst.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_dst
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/AESL_axi_s_src.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_s_src
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/AESL_deadlock_idx0_monitor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_idx0_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/AESL_deadlock_idx2_monitor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_idx2_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/AESL_deadlock_kernel_monitor_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_kernel_monitor_top
+WARNING: [VRFC 10-3824] variable 'block_delay' must explicitly be declared as automatic or static [C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/AESL_deadlock_kernel_monitor_top.v:34]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/AESL_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fifo
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/canny.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_canny_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/canny.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module canny
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/canny_ama_addmuladd_17s_17s_6ns_17ns_17_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module canny_ama_addmuladd_17s_17s_6ns_17ns_17_4_1_DSP48_5
+INFO: [VRFC 10-311] analyzing module canny_ama_addmuladd_17s_17s_6ns_17ns_17_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/canny_canny_Pipeline_idx_idy.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module canny_canny_Pipeline_idx_idy
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/canny_canny_Pipeline_read_img.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module canny_canny_Pipeline_read_img
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/canny_canny_Pipeline_rest_result.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module canny_canny_Pipeline_rest_result
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/canny_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module canny_control_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/canny_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module canny_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/canny_mac_muladd_11s_11s_22s_22_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module canny_mac_muladd_11s_11s_22s_22_4_1_DSP48_7
+INFO: [VRFC 10-311] analyzing module canny_mac_muladd_11s_11s_22s_22_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/canny_mac_muladd_17s_6ns_17ns_17_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module canny_mac_muladd_17s_6ns_17ns_17_4_1_DSP48_3
+INFO: [VRFC 10-311] analyzing module canny_mac_muladd_17s_6ns_17ns_17_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/canny_mac_muladd_17s_7s_17ns_17_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module canny_mac_muladd_17s_7s_17ns_17_4_1_DSP48_2
+INFO: [VRFC 10-311] analyzing module canny_mac_muladd_17s_7s_17ns_17_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/canny_mac_mul_sub_17s_6ns_17ns_17_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module canny_mac_mul_sub_17s_6ns_17ns_17_4_1_DSP48_4
+INFO: [VRFC 10-311] analyzing module canny_mac_mul_sub_17s_6ns_17ns_17_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/canny_mul_mul_11s_11s_22_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module canny_mul_mul_11s_11s_22_4_1_DSP48_6
+INFO: [VRFC 10-311] analyzing module canny_mul_mul_11s_11s_22_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/canny_mul_mul_17s_6ns_17_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module canny_mul_mul_17s_6ns_17_4_1_DSP48_1
+INFO: [VRFC 10-311] analyzing module canny_mul_mul_17s_6ns_17_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/canny_mul_mul_17s_7s_17_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module canny_mul_mul_17s_7s_17_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module canny_mul_mul_17s_7s_17_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/canny_mux_2511_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module canny_mux_2511_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/canny_mux_2544_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module canny_mux_2544_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/canny_mux_315_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module canny_mux_315_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/canny_mux_325_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module canny_mux_325_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/canny_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module canny_regslice_both
+INFO: [VRFC 10-311] analyzing module canny_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/canny_sdiv_16ns_11s_10_20_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module canny_sdiv_16ns_11s_10_20_1_divider
+INFO: [VRFC 10-311] analyzing module canny_sdiv_16ns_11s_10_20_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3645] port 'axis_block_info' remains unconnected for this instance [C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/AESL_deadlock_kernel_monitor_top.v:24]
+WARNING: [VRFC 10-3705] select index -1 into 'axis_block_sigs' is out of bounds [C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/AESL_deadlock_idx0_monitor.v:46]
+WARNING: [VRFC 10-3705] select index -1 into 'axis_block_sigs' is out of bounds [C:/Xilinx/Vitis_HLS/2022.1/HLS_LAB_C/canny/solution1/sim/verilog/AESL_deadlock_idx0_monitor.v:54]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.canny_flow_control_loop_pipe_seq...
+Compiling module xil_defaultlib.canny_canny_Pipeline_read_img
+Compiling module xil_defaultlib.canny_mux_2544_32_1_1(ID=1,din25...
+Compiling module xil_defaultlib.canny_mux_325_32_1_1(ID=1,din32_...
+Compiling module xil_defaultlib.canny_mux_315_32_1_1(ID=1,din31_...
+Compiling module xil_defaultlib.canny_mux_2511_32_1_1(ID=1,din25...
+Compiling module xil_defaultlib.canny_sdiv_16ns_11s_10_20_1_divi...
+Compiling module xil_defaultlib.canny_sdiv_16ns_11s_10_20_1(NUM_...
+Compiling module xil_defaultlib.canny_mul_mul_17s_7s_17_4_1_DSP4...
+Compiling module xil_defaultlib.canny_mul_mul_17s_7s_17_4_1(ID=1...
+Compiling module xil_defaultlib.canny_mul_mul_17s_6ns_17_4_1_DSP...
+Compiling module xil_defaultlib.canny_mul_mul_17s_6ns_17_4_1(ID=...
+Compiling module xil_defaultlib.canny_mac_muladd_17s_7s_17ns_17_...
+Compiling module xil_defaultlib.canny_mac_muladd_17s_7s_17ns_17_...
+Compiling module xil_defaultlib.canny_mac_muladd_17s_6ns_17ns_17...
+Compiling module xil_defaultlib.canny_mac_muladd_17s_6ns_17ns_17...
+Compiling module xil_defaultlib.canny_mac_mul_sub_17s_6ns_17ns_1...
+Compiling module xil_defaultlib.canny_mac_mul_sub_17s_6ns_17ns_1...
+Compiling module xil_defaultlib.canny_ama_addmuladd_17s_17s_6ns_...
+Compiling module xil_defaultlib.canny_ama_addmuladd_17s_17s_6ns_...
+Compiling module xil_defaultlib.canny_mul_mul_11s_11s_22_4_1_DSP...
+Compiling module xil_defaultlib.canny_mul_mul_11s_11s_22_4_1(ID=...
+Compiling module xil_defaultlib.canny_mac_muladd_11s_11s_22s_22_...
+Compiling module xil_defaultlib.canny_mac_muladd_11s_11s_22s_22_...
+Compiling module xil_defaultlib.canny_canny_Pipeline_idx_idy
+Compiling module xil_defaultlib.canny_canny_Pipeline_rest_result
+Compiling module xil_defaultlib.canny_control_s_axi
+Compiling module xil_defaultlib.canny_regslice_both
+Compiling module xil_defaultlib.canny
+Compiling module xil_defaultlib.fifo(DEPTH=17000,WIDTH=32)
+Compiling module xil_defaultlib.AESL_axi_s_src
+Compiling module xil_defaultlib.AESL_axi_s_dst
+Compiling module xil_defaultlib.AESL_axi_slave_control
+Compiling module xil_defaultlib.AESL_deadlock_idx2_monitor
+Compiling module xil_defaultlib.AESL_deadlock_idx0_monitor
+Compiling module xil_defaultlib.AESL_deadlock_kernel_monitor_top...
+Compiling module xil_defaultlib.nodf_module_intf
+Compiling module xil_defaultlib.pp_loop_intf(FSM_WIDTH=5)
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_canny_top
+Compiling module work.glbl
+Built simulation snapshot canny

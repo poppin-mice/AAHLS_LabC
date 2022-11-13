@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="top.hpp" path="C:\Users\edan\Desktop\serialization\top.hpp"/>
+    <originFiles name="top.cpp" path="C:\Users\edan\Desktop\serialization\top.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="var_data.arrow" path="C:\Users\edan\Desktop\serialization\data\var_data.arrow"/>
+    <originFiles name="var.obj" path="C:\Users\edan\Desktop\serialization\data\var.obj"/>
+    <originFiles name="test.cpp" path="C:\Users\edan\Desktop\serialization\test.cpp"/>
+    <originFiles name="mix_data.arrow" path="C:\Users\edan\Desktop\serialization\data\mix_data.arrow"/>
+    <originFiles name="mix.obj" path="C:\Users\edan\Desktop\serialization\data\mix.obj"/>
+    <originFiles name="fix_data.arrow" path="C:\Users\edan\Desktop\serialization\data\fix_data.arrow"/>
+    <originFiles name="fix.obj" path="C:\Users\edan\Desktop\serialization\data\fix.obj"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

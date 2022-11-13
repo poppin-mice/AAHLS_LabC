@@ -1,0 +1,221 @@
+
+
+================================================================
+== Synthesis Summary Report of 'canny'
+================================================================
++ General Information: 
+    * Date:           Sun Nov 13 22:12:16 2022
+    * Version:        2022.1 (Build 3526262 on Mon Apr 18 15:48:16 MDT 2022)
+    * Project:        canny
+    * Solution:       solution1 (Vitis Kernel Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------+------+------+---------+-----------+----------+---------+-------+----------+------+---------+-------------+-------------+-----+
+    |            Modules            | Issue|      | Latency |  Latency  | Iteration|         |  Trip |          |      |         |             |             |     |
+    |            & Loops            | Type | Slack| (cycles)|    (ns)   |  Latency | Interval| Count | Pipelined| BRAM |   DSP   |      FF     |     LUT     | URAM|
+    +-------------------------------+------+------+---------+-----------+----------+---------+-------+----------+------+---------+-------------+-------------+-----+
+    |+ canny                        |     -|  0.05|    16822|  8.075e+04|         -|    16823|      -|        no|     -|  20 (9%)|  65790 (61%)|  14889 (27%)|    -|
+    | + canny_Pipeline_read_img     |     -|  1.39|      261|  1.253e+03|         -|      261|      -|        no|     -|        -|  16523 (15%)|     65 (~0%)|    -|
+    |  o read_img                   |     -|  4.80|      259|  1.243e+03|         1|        1|    259|       yes|     -|        -|            -|            -|    -|
+    | + canny_Pipeline_idx_idy      |     -|  0.05|    16420|  7.882e+04|         -|    16420|      -|        no|     -|  20 (9%)|  35159 (33%)|  10664 (20%)|    -|
+    |  o idx_idy                    |     -|  4.80|    16416|  7.880e+04|        34|        1|  16384|       yes|     -|        -|            -|            -|    -|
+    | + canny_Pipeline_rest_result  |     -|  0.67|      132|    633.600|         -|      132|      -|        no|     -|        -|    7013 (6%)|    3876 (7%)|    -|
+    |  o rest_result                |     -|  4.80|      130|    624.000|         3|        1|    129|       yes|     -|        -|            -|            -|    -|
+    +-------------------------------+------+------+---------+-----------+----------+---------+-------+----------+------+---------+-------------+-------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 5             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+-------------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| Interface     | Register    | Offset | Width | Access | Description                      | Bit Fields                                                                         |
++---------------+-------------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| s_axi_control | CTRL        | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 4=AP_CONTINUE 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER        | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                                           |
+| s_axi_control | IP_IER      | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                                      |
+| s_axi_control | IP_ISR      | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                                      |
+| s_axi_control | upperThresh | 0x10   | 32    | W      | Data signal of upperThresh       |                                                                                    |
+| s_axi_control | lowerThresh | 0x18   | 32    | W      | Data signal of lowerThresh       |                                                                                    |
++---------------+-------------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+
+* AXIS
++-----------+---------------+-------+--------+--------+
+| Interface | Register Mode | TDATA | TREADY | TVALID |
++-----------+---------------+-------+--------+--------+
+| dst       | both          | 32    | 1      | 1      |
+| src       | both          | 32    | 1      | 1      |
++-----------+---------------+-------+--------+--------+
+
+* TOP LEVEL CONTROL
++-----------+---------------+-----------+
+| Interface | Type          | Ports     |
++-----------+---------------+-----------+
+| ap_clk    | clock         | ap_clk    |
+| ap_rst_n  | reset         | ap_rst_n  |
+| interrupt | interrupt     | interrupt |
+| ap_ctrl   | ap_ctrl_chain |           |
++-----------+---------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-------------+-----------+----------+
+| Argument    | Direction | Datatype |
++-------------+-----------+----------+
+| src         | in        | int*     |
+| dst         | out       | int*     |
+| upperThresh | in        | int      |
+| lowerThresh | in        | int      |
++-------------+-----------+----------+
+
+* SW-to-HW Mapping
++-------------+---------------+-----------+---------------------------------------+
+| Argument    | HW Interface  | HW Type   | HW Info                               |
++-------------+---------------+-----------+---------------------------------------+
+| src         | src           | interface |                                       |
+| dst         | dst           | interface |                                       |
+| upperThresh | s_axi_control | register  | name=upperThresh offset=0x10 range=32 |
+| lowerThresh | s_axi_control | register  | name=lowerThresh offset=0x18 range=32 |
++-------------+---------------+-----------+---------------------------------------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-----------------------------------------------+-----+--------+-------------------+-----+--------+---------+
+| Name                                          | DSP | Pragma | Variable          | Op  | Impl   | Latency |
++-----------------------------------------------+-----+--------+-------------------+-----+--------+---------+
+| + canny                                       | 20  |        |                   |     |        |         |
+|  + canny_Pipeline_read_img                    | 0   |        |                   |     |        |         |
+|    add_ln48_fu_8832_p2                        | -   |        | add_ln48          | add | fabric | 0       |
+|  + canny_Pipeline_idx_idy                     | 20  |        |                   |     |        |         |
+|    empty_17_fu_14275_p2                       | -   |        | empty_17          | add | fabric | 0       |
+|    empty_18_fu_14059_p2                       | -   |        | empty_18          | sub | fabric | 0       |
+|    conv2_i_i437_fu_14288_p2                   | -   |        | conv2_i_i437      | add | fabric | 0       |
+|    lhs_fu_16183_p2                            | -   |        | lhs               | add | fabric | 0       |
+|    empty_19_fu_14065_p2                       | -   |        | empty_19          | add | fabric | 0       |
+|    lhs_1_fu_14329_p2                          | -   |        | lhs_1             | add | fabric | 0       |
+|    i_3_fu_14079_p2                            | -   |        | i_3               | add | fabric | 0       |
+|    lhs_2_fu_14349_p2                          | -   |        | lhs_2             | add | fabric | 0       |
+|    empty_20_fu_14107_p2                       | -   |        | empty_20          | add | fabric | 0       |
+|    idx_V_4_fu_14121_p2                        | -   |        | idx_V_4           | sub | fabric | 0       |
+|    lhs_3_fu_14369_p2                          | -   |        | lhs_3             | add | fabric | 0       |
+|    add_ln59_4_fu_14141_p2                     | -   |        | add_ln59_4        | add | fabric | 0       |
+|    p_mid134_fu_14186_p2                       | -   |        | p_mid134          | sub | fabric | 0       |
+|    conv2_i_i437_mid1_fu_14382_p2              | -   |        | conv2_i_i437_mid1 | add | fabric | 0       |
+|    lhs_mid1_fu_16206_p2                       | -   |        | lhs_mid1          | add | fabric | 0       |
+|    lhs_1_mid1_fu_14430_p2                     | -   |        | lhs_1_mid1        | add | fabric | 0       |
+|    lhs_2_mid1_fu_14457_p2                     | -   |        | lhs_2_mid1        | add | fabric | 0       |
+|    p_mid138_fu_14206_p2                       | -   |        | p_mid138          | add | fabric | 0       |
+|    idx_V_4_mid1_fu_14220_p2                   | -   |        | idx_V_4_mid1      | sub | fabric | 0       |
+|    lhs_3_mid1_fu_14496_p2                     | -   |        | lhs_3_mid1        | add | fabric | 0       |
+|    add_ln59_fu_19118_p2                       | -   |        | add_ln59          | add | fabric | 0       |
+|    add_ln59_1_fu_19127_p2                     | -   |        | add_ln59_1        | add | fabric | 0       |
+|    add_ln59_2_fu_16222_p2                     | -   |        | add_ln59_2        | add | fabric | 0       |
+|    add_ln59_3_fu_16227_p2                     | -   |        | add_ln59_3        | add | fabric | 0       |
+|    add_ln79_fu_14512_p2                       | -   |        | add_ln79          | add | fabric | 0       |
+|    sub_ln80_fu_14236_p2                       | -   |        | sub_ln80          | sub | fabric | 0       |
+|    add_ln260_fu_14525_p2                      | -   |        | add_ln260         | add | fabric | 0       |
+|    add_ln1541_fu_19136_p2                     | -   |        | add_ln1541        | add | fabric | 0       |
+|    sub_ln886_fu_20204_p2                      | -   |        | sub_ln886         | sub | fabric | 0       |
+|    add_ln79_1_fu_14542_p2                     | -   |        | add_ln79_1        | add | fabric | 0       |
+|    add_ln1541_1_fu_16235_p2                   | -   |        | add_ln1541_1      | add | fabric | 0       |
+|    mac_muladd_17s_7s_17ns_17_4_1_U557         | 1   |        | mul_ln886         | mul | dsp48  | 3       |
+|    mul_mul_17s_7s_17_4_1_U550                 | 1   |        | mul_ln886_1       | mul | dsp48  | 3       |
+|    add_ln79_2_fu_14242_p2                     | -   |        | add_ln79_2        | add | fabric | 0       |
+|    add_ln1541_2_fu_16254_p2                   | -   |        | add_ln1541_2      | add | fabric | 0       |
+|    mac_muladd_17s_7s_17ns_17_4_1_U551         | 1   |        | mul_ln886_2       | mul | dsp48  | 3       |
+|    add_ln79_3_fu_14580_p2                     | -   |        | add_ln79_3        | add | fabric | 0       |
+|    sub_ln260_fu_14593_p2                      | -   |        | sub_ln260         | sub | fabric | 0       |
+|    add_ln1541_3_fu_19305_p2                   | -   |        | add_ln1541_3      | add | fabric | 0       |
+|    grp_fu_23937_p2                            | -   |        | sub_ln886_1       | sub | fabric | 0       |
+|    sub_ln886_2_fu_20461_p2                    | -   |        | sub_ln886_2       | sub | fabric | 0       |
+|    add_ln1541_4_fu_19353_p2                   | -   |        | add_ln1541_4      | add | fabric | 0       |
+|    mac_muladd_17s_7s_17ns_17_4_1_U552         | 1   |        | mul_ln886_3       | mul | dsp48  | 3       |
+|    sub_ln886_3_fu_20231_p2                    | -   |        | sub_ln886_3       | sub | fabric | 0       |
+|    add_ln1541_5_fu_16263_p2                   | -   |        | add_ln1541_5      | add | fabric | 0       |
+|    mul_mul_17s_7s_17_4_1_U543                 | 1   |        | mul_ln886_4       | mul | dsp48  | 3       |
+|    add_ln1541_6_fu_16331_p2                   | -   |        | add_ln1541_6      | add | fabric | 0       |
+|    mul_mul_17s_6ns_17_4_1_U544                | 1   |        | mul_ln886_5       | mul | dsp48  | 3       |
+|    mac_muladd_17s_7s_17ns_17_4_1_U545         | 1   |        | mul_ln886_6       | mul | dsp48  | 3       |
+|    add_ln1541_7_fu_19452_p2                   | -   |        | add_ln1541_7      | add | fabric | 0       |
+|    mac_muladd_17s_6ns_17ns_17_4_1_U553        | 1   |        | mul_ln886_7       | mul | dsp48  | 3       |
+|    sub_ln886_10_fu_20269_p2                   | -   |        | sub_ln886_10      | sub | fabric | 0       |
+|    mac_muladd_17s_7s_17ns_17_4_1_U546         | 1   |        | mul_ln886_8       | mul | dsp48  | 3       |
+|    sub_ln260_1_fu_16412_p2                    | -   |        | sub_ln260_1       | sub | fabric | 0       |
+|    mac_muladd_17s_6ns_17ns_17_4_1_U558        | 1   |        | mul_ln886_9       | mul | dsp48  | 3       |
+|    add_ln1541_8_fu_14614_p2                   | -   |        | add_ln1541_8      | add | fabric | 0       |
+|    mul_mul_17s_7s_17_4_1_U547                 | 1   |        | mul_ln886_10      | mul | dsp48  | 3       |
+|    sub_ln886_8_fu_19768_p2                    | -   |        | sub_ln886_8       | sub | fabric | 0       |
+|    add_ln1541_9_fu_16491_p2                   | -   |        | add_ln1541_9      | add | fabric | 0       |
+|    mac_muladd_17s_7s_17ns_17_4_1_U554         | 1   |        | mul_ln886_11      | mul | dsp48  | 3       |
+|    add_ln1541_10_fu_16496_p2                  | -   |        | add_ln1541_10     | add | fabric | 0       |
+|    mac_muladd_17s_6ns_17ns_17_4_1_U548        | 1   |        | mul_ln886_12      | mul | dsp48  | 3       |
+|    add_ln1541_11_fu_16501_p2                  | -   |        | add_ln1541_11     | add | fabric | 0       |
+|    mac_mul_sub_17s_6ns_17ns_17_4_1_U549       | 1   |        | mul_ln886_13      | mul | dsp48  | 3       |
+|    add_ln1541_12_fu_16506_p2                  | -   |        | add_ln1541_12     | add | fabric | 0       |
+|    sub_ln886_11_fu_20328_p2                   | -   |        | sub_ln886_11      | sub | fabric | 0       |
+|    add_ln1541_13_fu_16511_p2                  | -   |        | add_ln1541_13     | add | fabric | 0       |
+|    mac_muladd_17s_6ns_17ns_17_4_1_U559        | 1   |        | mul_ln886_14      | mul | dsp48  | 3       |
+|    mul_mul_17s_6ns_17_4_1_U555                | 1   |        | mul_ln886_15      | mul | dsp48  | 3       |
+|    add_ln1541_14_fu_16517_p2                  | -   |        | add_ln1541_14     | add | fabric | 0       |
+|    sub_ln886_12_fu_20341_p2                   | -   |        | sub_ln886_12      | sub | fabric | 0       |
+|    mac_muladd_17s_6ns_17ns_17_4_1_U560        | 1   |        | mul_ln886_16      | mul | dsp48  | 3       |
+|    add_ln1541_15_fu_16522_p2                  | -   |        | add_ln1541_15     | add | fabric | 0       |
+|    sub_ln886_13_fu_20360_p2                   | -   |        | sub_ln886_13      | sub | fabric | 0       |
+|    newFirst550_fu_20366_p2                    | -   |        | newFirst550       | sub | fabric | 0       |
+|    newFirst552_fu_20370_p2                    | -   |        | newFirst552       | sub | fabric | 0       |
+|    mac_muladd_17s_7s_17ns_17_4_1_U552         | 1   |        | add_ln886_3       | add | dsp48  | 3       |
+|    mac_muladd_17s_6ns_17ns_17_4_1_U553        | 1   |        | add_ln886_4       | add | dsp48  | 3       |
+|    mac_muladd_17s_7s_17ns_17_4_1_U546         | 1   |        | add_ln886_8       | add | dsp48  | 3       |
+|    mac_muladd_17s_7s_17ns_17_4_1_U554         | 1   |        | add_ln886_9       | add | dsp48  | 3       |
+|    mac_muladd_17s_6ns_17ns_17_4_1_U558        | 1   |        | add_ln886_10      | add | dsp48  | 3       |
+|    mac_mul_sub_17s_6ns_17ns_17_4_1_U549       | 1   |        | newFirst546       | sub | dsp48  | 3       |
+|    mac_muladd_17s_6ns_17ns_17_4_1_U548        | 1   |        | newSecond547      | add | dsp48  | 3       |
+|    add_ln886_12_fu_20476_p2                   | -   |        | add_ln886_12      | add | fabric | 0       |
+|    mac_muladd_17s_6ns_17ns_17_4_1_U560        | 1   |        | add_ln886_17      | add | dsp48  | 3       |
+|    mac_muladd_17s_6ns_17ns_17_4_1_U559        | 1   |        | add_ln886_19      | add | dsp48  | 3       |
+|    add_ln886_20_fu_20511_p2                   | -   |        | add_ln886_20      | add | fabric | 0       |
+|    mac_muladd_17s_7s_17ns_17_4_1_U545         | 1   |        | add_ln886_21      | add | dsp48  | 3       |
+|    ama_addmuladd_17s_17s_6ns_17ns_17_4_1_U556 | 1   |        | add_ln886_22      | add | dsp48  | 3       |
+|    ama_addmuladd_17s_17s_6ns_17ns_17_4_1_U556 | 1   |        | mul_ln886_17      | mul | dsp48  | 3       |
+|    ama_addmuladd_17s_17s_6ns_17ns_17_4_1_U556 | 1   |        | add_ln886_23      | add | dsp48  | 3       |
+|    add_ln886_24_fu_20489_p2                   | -   |        | add_ln886_24      | add | fabric | 0       |
+|    add_ln886_26_fu_20376_p2                   | -   |        | add_ln886_26      | add | fabric | 0       |
+|    mac_muladd_17s_7s_17ns_17_4_1_U557         | 1   |        | add_ln886_27      | add | dsp48  | 3       |
+|    add_ln886_28_fu_20515_p2                   | -   |        | add_ln886_28      | add | fabric | 0       |
+|    mac_muladd_17s_7s_17ns_17_4_1_U551         | 1   |        | add_ln886_30      | add | dsp48  | 3       |
+|    mac_muladd_11s_11s_22s_22_4_1_U562         | 1   |        | mul_ln75          | mul | dsp48  | 3       |
+|    mul_mul_11s_11s_22_4_1_U561                | 1   |        | mul_ln75_1        | mul | dsp48  | 3       |
+|    mac_muladd_11s_11s_22s_22_4_1_U562         | 1   |        | G_V_516           | add | dsp48  | 3       |
+|    add_ln154_fu_14620_p2                      | -   |        | add_ln154         | add | fabric | 0       |
+|  + canny_Pipeline_rest_result                 | 0   |        |                   |     |        |         |
+|    add_ln160_fu_7139_p2                       | -   |        | add_ln160         | add | fabric | 0       |
++-----------------------------------------------+-----+--------+-------------------+-----+--------+---------+
+
+
+================================================================
+== Bind Storage Report
+================================================================
+  No bind storage info in design
+
+================================================================
+== Pragma Report
+================================================================
+  No pragmas found
+

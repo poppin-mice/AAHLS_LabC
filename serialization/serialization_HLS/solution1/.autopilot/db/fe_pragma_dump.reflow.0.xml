@@ -1,0 +1,5 @@
+<pragmas>
+<pragma file="top.cpp" line="246" pragmaType="unroll" parentfunction="dut" factor="-1" skip_exit_check="0"/>
+<pragma file="top.cpp" line="7" pragmaType="interface" parentfunction="dut" mode="m_axi" port="src_buff" bundle="" offset="" name="" depth="120000" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+<pragma file="top.cpp" line="8" pragmaType="interface" parentfunction="dut" mode="m_axi" port="dst_buff" bundle="" offset="" name="" depth="120000" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1"/>
+</pragmas>

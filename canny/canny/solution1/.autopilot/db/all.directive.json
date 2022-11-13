@@ -1,0 +1,431 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "canny",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "6",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "canny"
+              }]
+          }
+        },
+        {
+          "functionName": "canny",
+          "label": "NonMaxSup_y",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "7",
+          "pragma": {"name": "PIPELINE"}
+        },
+        {
+          "functionName": "canny",
+          "label": "gradient_theta_shift",
+          "functionLabel": "",
+          "id": "3",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "8",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label0",
+          "functionLabel": "",
+          "id": "4",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "9",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label1",
+          "functionLabel": "",
+          "id": "5",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "10",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label2",
+          "functionLabel": "",
+          "id": "6",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "11",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label3",
+          "functionLabel": "",
+          "id": "7",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "12",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label4",
+          "functionLabel": "",
+          "id": "8",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "13",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label5",
+          "functionLabel": "",
+          "id": "9",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "14",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label6",
+          "functionLabel": "",
+          "id": "10",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "15",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label7",
+          "functionLabel": "",
+          "id": "11",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "16",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label8",
+          "functionLabel": "",
+          "id": "12",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "17",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label9",
+          "functionLabel": "",
+          "id": "13",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "18",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label10",
+          "functionLabel": "",
+          "id": "14",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "19",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label11",
+          "functionLabel": "",
+          "id": "15",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "20",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label12",
+          "functionLabel": "",
+          "id": "16",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "21",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label13",
+          "functionLabel": "",
+          "id": "17",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "22",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label14",
+          "functionLabel": "",
+          "id": "18",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "23",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label15",
+          "functionLabel": "",
+          "id": "19",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "24",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label16",
+          "functionLabel": "",
+          "id": "20",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "25",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label17",
+          "functionLabel": "",
+          "id": "21",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "26",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label18",
+          "functionLabel": "",
+          "id": "22",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "27",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label19",
+          "functionLabel": "",
+          "id": "23",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "28",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label20",
+          "functionLabel": "",
+          "id": "24",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "29",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label21",
+          "functionLabel": "",
+          "id": "25",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "30",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label22",
+          "functionLabel": "",
+          "id": "26",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "31",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label23",
+          "functionLabel": "",
+          "id": "27",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "32",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label24",
+          "functionLabel": "",
+          "id": "28",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "33",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label25",
+          "functionLabel": "",
+          "id": "29",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "34",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label26",
+          "functionLabel": "",
+          "id": "30",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "35",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label27",
+          "functionLabel": "",
+          "id": "31",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "36",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label28",
+          "functionLabel": "",
+          "id": "32",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "37",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label29",
+          "functionLabel": "",
+          "id": "33",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "38",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label30",
+          "functionLabel": "",
+          "id": "34",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "39",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label31",
+          "functionLabel": "",
+          "id": "35",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "40",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label32",
+          "functionLabel": "",
+          "id": "36",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "41",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label33",
+          "functionLabel": "",
+          "id": "37",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "42",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label34",
+          "functionLabel": "",
+          "id": "38",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "43",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label35",
+          "functionLabel": "",
+          "id": "39",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "44",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label36",
+          "functionLabel": "",
+          "id": "40",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "45",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label37",
+          "functionLabel": "",
+          "id": "41",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "46",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label38",
+          "functionLabel": "",
+          "id": "42",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "47",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label39",
+          "functionLabel": "",
+          "id": "43",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "48",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label40",
+          "functionLabel": "",
+          "id": "44",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "49",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "canny_label41",
+          "functionLabel": "",
+          "id": "45",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/directives.tcl",
+          "sourceLine": "50",
+          "pragma": {"name": "UNROLL"}
+        },
+        {
+          "functionName": "canny",
+          "label": "",
+          "functionLabel": "",
+          "id": "46",
+          "sourceFile": "C:\/Xilinx\/Vitis_HLS\/2022.1\/HLS_LAB_C\/canny\/solution1\/csynth.tcl",
+          "sourceLine": "18",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "canny"
+              }]
+          }
+        }
+      ]
+    }]}

@@ -1,0 +1,56 @@
+
+主機名稱:             DESKTOP-HGOKHAJ
+作業系統名稱:         Microsoft Windows 10 專業版
+作業系統版本:         10.0.19044 N/A 組建 19044
+作業系統製造商:       Microsoft Corporation
+作業系統設定:         獨立工作站
+作業系統組建類型:     Multiprocessor Free
+註冊的擁有者:         edan@access.ee.ntu.edu.tw
+註冊公司:             N/A
+產品識別碼:           00331-10000-00001-AA937
+原始安裝日期:         2022/9/18, 下午 03:38:23
+系統開機時間:         2022/10/31, 下午 02:19:44
+系統製造商:           To Be Filled By O.E.M.
+系統型號:             To Be Filled By O.E.M.
+系統類型:             x64-based PC
+處理器:               已安裝 1 處理器。
+                      [01]: AMD64 Family 25 Model 80 Stepping 0 AuthenticAMD ~3901 Mhz
+BIOS 版本:            American Megatrends International, LLC. P1.20, 2021/7/12
+Windows 目錄:         C:\WINDOWS
+系統目錄:             C:\WINDOWS\system32
+開機裝置:             \Device\HarddiskVolume1
+系統地區設定:         zh-tw;中文 (台灣)
+輸入法地區設定:       zh-tw;中文 (台灣)
+時區:                 (UTC+08:00) 台北
+實體記憶體總計:       28,553 MB
+可用實體記憶體:       15,864 MB
+虛擬記憶體: 大小上限: 32,905 MB
+虛擬記憶體: 可用:     12,647 MB
+虛擬記憶體: 使用中:   20,258 MB
+分頁檔位置:           C:\pagefile.sys
+網域:                 WORKGROUP
+登入伺服器:           \\DESKTOP-HGOKHAJ
+Hotfix:               已安裝 5 Hotfix。
+                      [01]: KB5018329
+                      [02]: KB5003791
+                      [03]: KB5012170
+                      [04]: KB5018410
+                      [05]: KB5016705
+網路卡:               已安裝 3 NIC。
+                      [01]: Intel(R) Dual Band Wireless-AC 3168
+                            連線名稱:           Wi-Fi
+                            DHCP 已啟用:          是
+                            DHCP 伺服器:        192.168.0.1
+                            IP 位址
+                            [01]: 192.168.0.13
+                            [02]: fe80::284e:3df6:c642:32ba
+                      [02]: Realtek PCIe GbE Family Controller
+                            連線名稱:           乙太網路
+                            狀態:               媒體已中斷連線
+                      [03]: Bluetooth Device (Personal Area Network)
+                            連線名稱:           藍牙網路連線
+                            狀態:               媒體已中斷連線
+Hyper-V 需求:         VM 監視器模式擴充: 是
+                      韌體中已啟用虛擬化: 是
+                      第二層位址轉譯: 是
+                      具有資料執行防止: 是

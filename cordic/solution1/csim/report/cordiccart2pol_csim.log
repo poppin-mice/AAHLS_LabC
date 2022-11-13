@@ -1,0 +1,13 @@
+INFO: [SIM 2] *************** CSIM start ***************
+INFO: [SIM 4] CSIM will launch GCC as the compiler.
+   Compiling ../../../cordiccart2pol_test.cpp in debug mode
+   Compiling ../../../cordiccart2pol.cpp in debug mode
+   Generating csim.exe
+---Testing results----------------------------------
+---RMS error----------------------------------
+----------------------------------------------
+   RMSE(R)           RMSE(Theta)
+0.000800701964181 0.000633431132883
+----------------------------------------------
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

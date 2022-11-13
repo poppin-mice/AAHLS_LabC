@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="canny.cpp" path="C:\Xilinx\Vitis_HLS\2022.1\HLS_LAB_C\canny.cpp"/>
+    <originFiles name="canny.hpp" path="C:\Xilinx\Vitis_HLS\2022.1\HLS_LAB_C\canny.hpp"/>
+  </source>
+  <testbench>
+    <originFiles name="src.txt" path="C:\Xilinx\Vitis_HLS\2022.1\HLS_LAB_C\src.txt"/>
+    <originFiles name="dst.txt" path="C:\Xilinx\Vitis_HLS\2022.1\HLS_LAB_C\dst.txt"/>
+    <originFiles name="canny_test.cpp" path="C:\Xilinx\Vitis_HLS\2022.1\HLS_LAB_C\canny_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

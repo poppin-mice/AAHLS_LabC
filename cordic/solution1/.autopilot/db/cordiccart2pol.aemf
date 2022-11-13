@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdfg:DBCdfg xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cdfg="http://www.autoesl.com/DBCdfg" timeStamp="1668351448239">
+  <ports id="1" name="x" type="PortType" originalName="x.V" coreId="1769103734" bitwidth="15">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="2" name="y" type="PortType" originalName="y.V" coreId="1953391988" bitwidth="15">
+    <dataOutputObjs>read</dataOutputObjs>
+  </ports>
+  <ports id="3" name="r" type="PortType" coreId="694510703" bitwidth="15" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <ports id="4" name="theta" type="PortType" coreId="1768190575" bitwidth="15" direction="DirOut">
+    <dataInputObjs>write</dataInputObjs>
+  </ports>
+  <edges id="60" source_obj="//@ports.1" sink_obj="//@blocks.0/@node_objs.0"/>
+  <edges id="62" source_obj="//@ports.0" sink_obj="//@blocks.0/@node_objs.1"/>
+  <edges id="68" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.4"/>
+  <edges id="73" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.5"/>
+  <edges id="75" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.6"/>
+  <edges id="76" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="77" source_obj="//@blocks.0/@node_objs.6" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="78" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.7"/>
+  <edges id="79" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="80" source_obj="//@blocks.0/@node_objs.5" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="81" source_obj="//@blocks.0/@node_objs.1" sink_obj="//@blocks.0/@node_objs.8"/>
+  <edges id="84" source_obj="//@blocks.0/@node_objs.7" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="85" source_obj="//@blocks.0/@node_objs.8" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="86" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="87" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="88" source_obj="//@blocks.0/@node_objs.3" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="89" source_obj="//@blocks.0/@node_objs.2" sink_obj="//@blocks.0/@node_objs.11"/>
+  <edges id="92" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.12"/>
+  <edges id="96" source_obj="//@blocks.0/@node_objs.12" sink_obj="//@blocks.0/@node_objs.13"/>
+  <edges id="99" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.14"/>
+  <edges id="103" source_obj="//@blocks.0/@node_objs.14" sink_obj="//@blocks.0/@node_objs.15"/>
+  <edges id="106" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.16"/>
+  <edges id="110" source_obj="//@blocks.0/@node_objs.16" sink_obj="//@blocks.0/@node_objs.17"/>
+  <edges id="113" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.18"/>
+  <edges id="117" source_obj="//@blocks.0/@node_objs.18" sink_obj="//@blocks.0/@node_objs.19"/>
+  <edges id="120" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.20"/>
+  <edges id="124" source_obj="//@blocks.0/@node_objs.20" sink_obj="//@blocks.0/@node_objs.21"/>
+  <edges id="127" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.22"/>
+  <edges id="131" source_obj="//@blocks.0/@node_objs.22" sink_obj="//@blocks.0/@node_objs.23"/>
+  <edges id="134" source_obj="//@blocks.0/@node_objs.10" sink_obj="//@blocks.0/@node_objs.24"/>
+  <edges id="138" source_obj="//@blocks.0/@node_objs.24" sink_obj="//@blocks.0/@node_objs.25"/>
+  <edges id="139" source_obj="//@blocks.0/@node_objs.15" sink_obj="//@blocks.0/@node_objs.26"/>
+  <edges id="140" source_obj="//@blocks.0/@node_objs.17" sink_obj="//@blocks.0/@node_objs.26"/>
+  <edges id="141" source_obj="//@blocks.0/@node_objs.26" sink_obj="//@blocks.0/@node_objs.27"/>
+  <edges id="142" source_obj="//@blocks.0/@node_objs.27" sink_obj="//@blocks.0/@node_objs.28"/>
+  <edges id="143" source_obj="//@blocks.0/@node_objs.13" sink_obj="//@blocks.0/@node_objs.28"/>
+  <edges id="144" source_obj="//@blocks.0/@node_objs.19" sink_obj="//@blocks.0/@node_objs.29"/>
+  <edges id="145" source_obj="//@blocks.0/@node_objs.21" sink_obj="//@blocks.0/@node_objs.29"/>
+  <edges id="146" source_obj="//@blocks.0/@node_objs.23" sink_obj="//@blocks.0/@node_objs.30"/>
+  <edges id="147" source_obj="//@blocks.0/@node_objs.25" sink_obj="//@blocks.0/@node_objs.30"/>
+  <edges id="148" source_obj="//@blocks.0/@node_objs.30" sink_obj="//@blocks.0/@node_objs.31"/>
+  <edges id="149" source_obj="//@blocks.0/@node_objs.31" sink_obj="//@blocks.0/@node_objs.32"/>
+  <edges id="150" source_obj="//@blocks.0/@node_objs.29" sink_obj="//@blocks.0/@node_objs.32"/>
+  <edges id="151" source_obj="//@blocks.0/@node_objs.32" sink_obj="//@blocks.0/@node_objs.33"/>
+  <edges id="152" source_obj="//@blocks.0/@node_objs.33" sink_obj="//@blocks.0/@node_objs.34"/>
+  <edges id="153" source_obj="//@blocks.0/@node_objs.28" sink_obj="//@blocks.0/@node_objs.34"/>
+  <edges id="156" source_obj="//@blocks.0/@node_objs.35" sink_obj="//@ports.2"/>
+  <edges id="157" source_obj="//@blocks.0/@node_objs.34" sink_obj="//@blocks.0/@node_objs.35"/>
+  <edges id="159" source_obj="//@blocks.0/@node_objs.0" sink_obj="//@blocks.0/@node_objs.36"/>
+  <edges id="161" source_obj="//@blocks.0/@node_objs.36" sink_obj="//@blocks.0/@node_objs.37"/>
+  <edges id="166" source_obj="//@blocks.0/@node_objs.37" sink_obj="//@blocks.0/@node_objs.38"/>
+  <edges id="167" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.38"/>
+  <edges id="168" source_obj="//@blocks.0/@node_objs.4" sink_obj="//@blocks.0/@node_objs.39"/>
+  <edges id="169" source_obj="//@blocks.0/@node_objs.38" sink_obj="//@blocks.0/@node_objs.39"/>
+  <edges id="170" source_obj="//@blocks.0/@node_objs.11" sink_obj="//@blocks.0/@node_objs.39"/>
+  <edges id="172" source_obj="//@blocks.0/@node_objs.40" sink_obj="//@ports.3"/>
+  <edges id="173" source_obj="//@blocks.0/@node_objs.39" sink_obj="//@blocks.0/@node_objs.40"/>
+  <edges id="174" sink_obj="//@blocks.0/@node_objs.9"/>
+  <edges id="269" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.10"/>
+  <edges id="270" edge_type="VirtEdge" source_obj="//@blocks.0/@node_objs.9" sink_obj="//@blocks.0/@node_objs.11"/>
+  <blocks id="57" name="cordiccart2pol" type="BlockType">
+    <node_objs xsi:type="cdfg:CdfgNode" id="6" name="y_read" coreId="1043341356" bitwidth="15" opcode="read" m_display="0" m_topoIndex="1" m_clusterGroupNumber="-1">
+      <dataInputObjs>y</dataInputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="7" name="x_read" coreId="1043341356" bitwidth="15" opcode="read" m_display="0" m_topoIndex="2" m_clusterGroupNumber="-1">
+      <dataInputObjs>x</dataInputObjs>
+      <dataOutputObjs>bitselect</dataOutputObjs>
+      <dataOutputObjs>sub</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="8" name="theta_out_V_loc" coreId="741487420" bitwidth="15" opcode="alloca" m_display="0" m_topoIndex="3" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="9" name="x_cordic_V_1_loc" coreId="1043341356" bitwidth="15" opcode="alloca" m_display="0" m_topoIndex="4" m_clusterGroupNumber="-1">
+      <dataOutputObjs>call</dataOutputObjs>
+      <dataOutputObjs>load</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="19" name="tmp" lineNumber="1697" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="tmp_reg_350" coreId="1043341356" contextFuncName="operator_ge_32_32_true_AP_TRN_AP_WRAP_0" bitwidth="1" opcode="bitselect" m_display="0" m_topoIndex="5" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1697" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator&amp;gt;=&amp;lt;32, 32, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="20" name="x_cordic_V" lineNumber="859" originalName="x_cordic.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="x_cordic_V_fu_124_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="operator_assign_16_4_true_AP_TRN_AP_WRAP_0" bitwidth="15" opcode="sub" m_display="0" m_delay="1.94" m_topoIndex="6" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator=&amp;lt;16, 4, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="21" name="y_cordic_V" lineNumber="859" originalName="y_cordic.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="y_cordic_V_fu_130_p2" coreName="Adder" implIndex="fabric" control="no" opType="sub" coreId="1" contextFuncName="operator_assign_16_4_true_AP_TRN_AP_WRAP_0" bitwidth="15" opcode="sub" m_display="0" m_delay="1.94" m_topoIndex="7" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator=&amp;lt;16, 4, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="22" name="select_ln1697" lineNumber="1697" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="select_ln1697_fu_136_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="operator_ge_32_32_true_AP_TRN_AP_WRAP_0" bitwidth="15" opcode="select" m_display="0" m_delay="0.75" m_topoIndex="8" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1697" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator&amp;gt;=&amp;lt;32, 32, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="23" name="select_ln1697_1" lineNumber="1697" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="select_ln1697_1_fu_145_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="operator_ge_32_32_true_AP_TRN_AP_WRAP_0" bitwidth="15" opcode="select" m_display="0" m_delay="0.75" m_topoIndex="9" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1697" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator&amp;gt;=&amp;lt;32, 32, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataInputObjs>sub</dataInputObjs>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>call</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="24" name="_ln1697" lineNumber="1697" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="grp_cordiccart2pol_Pipeline_cordic_loop_fu_106" coreId="1043341356" contextFuncName="operator_ge_32_32_true_AP_TRN_AP_WRAP_0" opcode="call" nodeLatency="1" m_display="0" m_delay="1.58" m_topoIndex="10" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1697" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator&amp;gt;=&amp;lt;32, 32, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataInputObjs>alloca</dataInputObjs>
+      <constName>cordiccart2pol_Pipeline_cordic_loop</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="25" name="x_cordic_V_1_loc_load" coreId="807414835" bitwidth="15" opcode="load" nodeLabel="2.0" m_display="0" m_topoIndex="11" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+      <dataOutputObjs>partselect</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="26" name="theta_out_V_loc_load" coreId="1043341356" bitwidth="15" opcode="load" nodeLabel="2.0" m_display="0" m_topoIndex="12" m_clusterGroupNumber="-1">
+      <dataInputObjs>alloca</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="27" name="r_1" lineNumber="1534" originalName="r" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="r_1_reg_365" coreId="741487420" contextFuncName="operator_rs" bitwidth="14" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="13" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1534" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator&amp;gt;&amp;gt;"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="28" name="sext_ln1534" lineNumber="1534" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="sext_ln1534_fu_311_p1" coreId="1043341356" contextFuncName="operator_rs" bitwidth="15" opcode="sext" nodeLabel="3.0" m_display="0" m_topoIndex="36" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1534" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator&amp;gt;&amp;gt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="29" name="r_2" lineNumber="1534" originalName="r" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="r_2_fu_170_p4" coreId="1043341356" contextFuncName="operator_rs" bitwidth="11" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="14" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1534" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator&amp;gt;&amp;gt;"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="30" name="sext_ln1533" lineNumber="1533" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="sext_ln1533_fu_180_p1" coreId="1043341356" contextFuncName="operator_rs" bitwidth="12" opcode="sext" nodeLabel="2.0" m_display="0" m_topoIndex="15" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1533" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator&amp;gt;&amp;gt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="31" name="r_3" lineNumber="1534" originalName="r" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="r_3_fu_184_p4" coreId="741487420" contextFuncName="operator_rs" bitwidth="10" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="16" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1534" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator&amp;gt;&amp;gt;"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="32" name="sext_ln1533_1" lineNumber="1533" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="sext_ln1533_1_fu_194_p1" coreId="1043341356" contextFuncName="operator_rs" bitwidth="12" opcode="sext" nodeLabel="2.0" m_display="0" m_topoIndex="17" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1533" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator&amp;gt;&amp;gt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="33" name="r_V" lineNumber="1534" originalName="r.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="r_V_fu_198_p4" coreId="1043341356" contextFuncName="operator_rs" bitwidth="8" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="18" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1534" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator&amp;gt;&amp;gt;"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="34" name="sext_ln1533_2" lineNumber="1533" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="sext_ln1533_2_fu_208_p1" coreId="0" contextFuncName="operator_rs" bitwidth="9" opcode="sext" nodeLabel="2.0" m_display="0" m_topoIndex="19" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1533" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator&amp;gt;&amp;gt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="35" name="r_V_1" lineNumber="1534" originalName="r.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="r_V_1_fu_212_p4" coreId="0" contextFuncName="operator_rs" bitwidth="7" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="20" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1534" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator&amp;gt;&amp;gt;"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="36" name="sext_ln1533_3" lineNumber="1533" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="sext_ln1533_3_fu_222_p1" coreId="0" contextFuncName="operator_rs" bitwidth="9" opcode="sext" nodeLabel="2.0" m_display="0" m_topoIndex="21" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1533" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator&amp;gt;&amp;gt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="37" name="r_V_2" lineNumber="1534" originalName="r.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="r_V_2_fu_226_p4" coreId="3061541840" contextFuncName="operator_rs" bitwidth="5" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="22" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1534" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator&amp;gt;&amp;gt;"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="38" name="sext_ln1533_4" lineNumber="1533" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="sext_ln1533_4_fu_236_p1" coreId="4294967294" contextFuncName="operator_rs" bitwidth="6" opcode="sext" nodeLabel="2.0" m_display="0" m_topoIndex="23" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1533" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator&amp;gt;&amp;gt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="39" name="r_V_3" lineNumber="1534" originalName="r.V" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="r_V_3_fu_240_p4" coreId="21" contextFuncName="operator_rs" bitwidth="4" opcode="partselect" nodeLabel="2.0" m_display="0" m_topoIndex="24" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1534" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator&amp;gt;&amp;gt;"/>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="40" name="sext_ln1533_5" lineNumber="1533" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="sext_ln1533_5_fu_250_p1" coreId="0" contextFuncName="operator_rs" bitwidth="6" opcode="sext" nodeLabel="2.0" m_display="0" m_topoIndex="25" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1533" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator&amp;gt;&amp;gt;"/>
+      <dataInputObjs>partselect</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="41" name="add_ln859" lineNumber="859" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="add_ln859_fu_254_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="operator_assign_21_9_true_AP_TRN_AP_WRAP_0" bitwidth="12" opcode="add" nodeLabel="2.0" m_display="0" m_delay="1.63" m_topoIndex="26" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator=&amp;lt;21, 9, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="42" name="sext_ln859" lineNumber="859" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="sext_ln859_fu_314_p1" coreId="0" contextFuncName="operator_assign_21_9_true_AP_TRN_AP_WRAP_0" bitwidth="15" opcode="sext" nodeLabel="3.0" m_display="0" m_topoIndex="37" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator=&amp;lt;21, 9, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="43" name="add_ln859_1" lineNumber="859" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="add_ln859_1_fu_317_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="all" coreId="10" contextFuncName="operator_assign_21_9_true_AP_TRN_AP_WRAP_0" bitwidth="15" opcode="add" nodeLabel="3.0" m_display="0" m_topoIndex="38" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator=&amp;lt;21, 9, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="44" name="add_ln859_2" lineNumber="859" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="add_ln859_2_fu_260_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="all" coreId="10" contextFuncName="operator_assign_21_9_true_AP_TRN_AP_WRAP_0" bitwidth="9" opcode="add" nodeLabel="2.0" m_display="0" m_topoIndex="27" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator=&amp;lt;21, 9, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="45" name="add_ln859_3" lineNumber="859" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="add_ln859_3_fu_266_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="operator_assign_21_9_true_AP_TRN_AP_WRAP_0" bitwidth="6" opcode="add" nodeLabel="2.0" m_display="0" m_delay="1.78" m_topoIndex="28" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator=&amp;lt;21, 9, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="46" name="sext_ln859_1" lineNumber="859" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="sext_ln859_1_fu_272_p1" coreId="0" contextFuncName="operator_assign_21_9_true_AP_TRN_AP_WRAP_0" bitwidth="9" opcode="sext" nodeLabel="2.0" m_display="0" m_topoIndex="29" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator=&amp;lt;21, 9, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="47" name="add_ln859_4" lineNumber="859" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="add_ln859_4_fu_276_p2" coreName="TAddSub" implIndex="tadder" control="no" opType="all" coreId="10" contextFuncName="operator_assign_21_9_true_AP_TRN_AP_WRAP_0" bitwidth="9" opcode="add" nodeLabel="2.0" m_display="0" m_delay="3.69" m_topoIndex="30" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator=&amp;lt;21, 9, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>sext</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="48" name="sext_ln859_2" lineNumber="859" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="sext_ln859_2_fu_323_p1" coreId="1768190575" contextFuncName="operator_assign_21_9_true_AP_TRN_AP_WRAP_0" bitwidth="15" opcode="sext" nodeLabel="3.0" m_display="0" m_topoIndex="39" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator=&amp;lt;21, 9, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="49" name="add_ln859_5" lineNumber="859" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="r" coreName="TAddSub" implIndex="tadder" control="no" opType="all" coreId="10" contextFuncName="operator_assign_21_9_true_AP_TRN_AP_WRAP_0" bitwidth="15" opcode="add" nodeLabel="3.0" m_display="0" m_delay="3.87" m_topoIndex="40" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="859" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator=&amp;lt;21, 9, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>sext</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="50" name="r_write_ln53" lineNumber="53" fileName="cordic_HLS/cordiccart2pol.cpp" fileDirectory=".." coreId="1601200424" contextFuncName="cordiccart2pol" opcode="write" nodeLabel="3.0" m_display="0" m_topoIndex="41" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_HLS/cordiccart2pol.cpp" linenumber="53" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="cordiccart2pol"/>
+      <dataInputObjs>add</dataInputObjs>
+      <dataOutputObjs>r</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="51" name="tmp_1" lineNumber="56" fileName="cordic_HLS/cordiccart2pol.cpp" fileDirectory=".." rtlName="tmp_1_fu_282_p3" coreId="1885415456" contextFuncName="cordiccart2pol" bitwidth="1" opcode="bitselect" nodeLabel="2.0" m_display="0" m_topoIndex="31" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="cordic_HLS/cordiccart2pol.cpp" linenumber="56" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="cordiccart2pol"/>
+      <dataInputObjs>read</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="52" name="select_ln56" lineNumber="56" fileName="cordic_HLS/cordiccart2pol.cpp" fileDirectory=".." rtlName="select_ln56_fu_289_p3" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="cordiccart2pol" bitwidth="15" opcode="select" nodeLabel="2.0" m_display="0" m_topoIndex="32" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="cordic_HLS/cordiccart2pol.cpp" linenumber="56" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="cordiccart2pol"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataOutputObjs>add</dataOutputObjs>
+      <constName>empty</constName>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="53" name="add_ln56" lineNumber="56" fileName="cordic_HLS/cordiccart2pol.cpp" fileDirectory=".." rtlName="add_ln56_fu_297_p2" coreName="Adder" implIndex="fabric" control="no" opType="add" coreId="1" contextFuncName="cordiccart2pol" bitwidth="15" opcode="add" nodeLabel="2.0" m_display="0" m_delay="1.94" m_topoIndex="33" m_clusterGroupNumber="1">
+      <inlineStackInfo fileName="cordic_HLS/cordiccart2pol.cpp" linenumber="56" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="cordiccart2pol"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>select</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="54" name="select_ln1697_2" lineNumber="1697" fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" fileDirectory=".." rtlName="theta" coreName="Sel" implIndex="auto_sel" control="no" opType="select" coreId="73" contextFuncName="operator_ge_32_32_true_AP_TRN_AP_WRAP_0" bitwidth="15" opcode="select" nodeLabel="2.0" m_display="0" m_delay="0.75" m_topoIndex="34" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h" linenumber="1697" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="operator&amp;gt;=&amp;lt;32, 32, true, AP_TRN, AP_WRAP, 0&amp;gt;"/>
+      <dataInputObjs>bitselect</dataInputObjs>
+      <dataInputObjs>add</dataInputObjs>
+      <dataInputObjs>load</dataInputObjs>
+      <dataOutputObjs>write</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="55" name="theta_write_ln54" lineNumber="54" fileName="cordic_HLS/cordiccart2pol.cpp" fileDirectory=".." coreId="1601134448" contextFuncName="cordiccart2pol" opcode="write" nodeLabel="2.0" m_display="0" m_topoIndex="35" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_HLS/cordiccart2pol.cpp" linenumber="54" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="cordiccart2pol"/>
+      <dataInputObjs>select</dataInputObjs>
+      <dataOutputObjs>theta</dataOutputObjs>
+    </node_objs>
+    <node_objs xsi:type="cdfg:CdfgNode" id="56" name="_ln59" lineNumber="59" fileName="cordic_HLS/cordiccart2pol.cpp" fileDirectory=".." coreId="673195817" contextFuncName="cordiccart2pol" opcode="ret" nodeLabel="3.0" m_display="0" m_topoIndex="42" m_clusterGroupNumber="-1">
+      <inlineStackInfo fileName="cordic_HLS/cordiccart2pol.cpp" linenumber="59" fileDirectory="C:\Users\edan\Desktop\LabC" functionName="cordiccart2pol"/>
+    </node_objs>
+    <fileValidLineNumbers fileName="C:/Xilinx/Vitis_HLS/2022.1/common/technology/autopilot\ap_fixed_base.h">
+      <validLinenumbers>1697</validLinenumbers>
+      <validLinenumbers>859</validLinenumbers>
+      <validLinenumbers>1534</validLinenumbers>
+      <validLinenumbers>1533</validLinenumbers>
+    </fileValidLineNumbers>
+    <fileValidLineNumbers fileName="cordic_HLS/cordiccart2pol.cpp">
+      <validLinenumbers>53</validLinenumbers>
+      <validLinenumbers>56</validLinenumbers>
+      <validLinenumbers>54</validLinenumbers>
+      <validLinenumbers>59</validLinenumbers>
+    </fileValidLineNumbers>
+  </blocks>
+  <ScheduleInfo time="0"/>
+  <ScheduleInfo time="1"/>
+  <ScheduleInfo time="2"/>
+  <ScheduleInfo time="3"/>
+  <regnodes realName="select_ln1697_1_reg_360">
+    <nodeIds>23</nodeIds>
+  </regnodes>
+  <regnodes realName="r_1_reg_365">
+    <nodeIds>27</nodeIds>
+  </regnodes>
+  <regnodes realName="y_read_reg_333">
+    <nodeIds>6</nodeIds>
+  </regnodes>
+  <regnodes realName="tmp_reg_350">
+    <nodeIds>19</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln859_4_reg_375">
+    <nodeIds>47</nodeIds>
+  </regnodes>
+  <regnodes realName="select_ln1697_reg_355">
+    <nodeIds>22</nodeIds>
+  </regnodes>
+  <regnodes realName="add_ln859_reg_370">
+    <nodeIds>41</nodeIds>
+  </regnodes>
+  <regnodes realName="theta_out_V_loc_reg_338">
+    <nodeIds>8</nodeIds>
+  </regnodes>
+  <regnodes realName="x_cordic_V_1_loc_reg_344">
+    <nodeIds>9</nodeIds>
+  </regnodes>
+  <expressionNodes realName="r_V_3_fu_240">
+    <nodeIds>39</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln859_1_fu_272">
+    <nodeIds>46</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_fu_116">
+    <nodeIds>19</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_V_2_fu_226">
+    <nodeIds>37</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="y_cordic_V_fu_130">
+    <nodeIds>21</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_V_fu_198">
+    <nodeIds>33</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="x_cordic_V_1_loc_fu_76">
+    <nodeIds>9</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1533_2_fu_208">
+    <nodeIds>34</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln859_1_fu_317">
+    <nodeIds>43</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_V_1_fu_212">
+    <nodeIds>35</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_2_fu_170">
+    <nodeIds>29</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln56_fu_289">
+    <nodeIds>52</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1533_3_fu_222">
+    <nodeIds>36</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln859_4_fu_276">
+    <nodeIds>47</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1534_fu_311">
+    <nodeIds>28</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln859_3_fu_266">
+    <nodeIds>45</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln859_5_fu_326">
+    <nodeIds>49</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln1697_1_fu_145">
+    <nodeIds>23</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln859_2_fu_323">
+    <nodeIds>48</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_3_fu_184">
+    <nodeIds>31</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="tmp_1_fu_282">
+    <nodeIds>51</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln859_fu_254">
+    <nodeIds>41</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="theta_out_V_loc_fu_72">
+    <nodeIds>8</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln1697_2_fu_303">
+    <nodeIds>54</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="select_ln1697_fu_136">
+    <nodeIds>22</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln56_fu_297">
+    <nodeIds>53</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="x_cordic_V_fu_124">
+    <nodeIds>20</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1533_4_fu_236">
+    <nodeIds>38</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1533_fu_180">
+    <nodeIds>30</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="r_1_fu_160">
+    <nodeIds>27</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln859_fu_314">
+    <nodeIds>42</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1533_1_fu_194">
+    <nodeIds>32</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="add_ln859_2_fu_260">
+    <nodeIds>44</nodeIds>
+  </expressionNodes>
+  <expressionNodes realName="sext_ln1533_5_fu_250">
+    <nodeIds>40</nodeIds>
+  </expressionNodes>
+  <moduleNodes realName="grp_cordiccart2pol_Pipeline_cordic_loop_fu_106">
+    <nodeIds>24</nodeIds>
+  </moduleNodes>
+  <ioNodes realName="x_read_read_fu_86">
+    <nodeIds>7</nodeIds>
+  </ioNodes>
+  <ioNodes realName="x_cordic_V_1_loc_load_load_fu_154">
+    <nodeIds>25</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln54_write_fu_92">
+    <nodeIds>55</nodeIds>
+  </ioNodes>
+  <ioNodes realName="write_ln53_write_fu_99">
+    <nodeIds>50</nodeIds>
+  </ioNodes>
+  <ioNodes realName="y_read_read_fu_80">
+    <nodeIds>6</nodeIds>
+  </ioNodes>
+  <ioNodes realName="theta_out_V_loc_load_load_fu_157">
+    <nodeIds>26</nodeIds>
+  </ioNodes>
+  <memoryPorts dataString="angles_V" portID="100">
+    <nodeIds>24</nodeIds>
+  </memoryPorts>
+  <ioPorts name="r">
+    <contents name="write">
+      <nodeIds>50</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="theta">
+    <contents name="write">
+      <nodeIds>55</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="x">
+    <contents name="read">
+      <nodeIds>7</nodeIds>
+    </contents>
+  </ioPorts>
+  <ioPorts name="y">
+    <contents name="read">
+      <nodeIds>6</nodeIds>
+    </contents>
+  </ioPorts>
+  <fsm>
+    <states id="1">
+      <operations id="6" stage="1" latency="1"/>
+      <operations id="7" stage="1" latency="1"/>
+      <operations id="8" stage="1" latency="1"/>
+      <operations id="9" stage="1" latency="1"/>
+      <operations id="19" stage="1" latency="1"/>
+      <operations id="20" stage="1" latency="1"/>
+      <operations id="21" stage="1" latency="1"/>
+      <operations id="22" stage="1" latency="1"/>
+      <operations id="23" stage="1" latency="1"/>
+      <operations id="24" stage="2" latency="2"/>
+    </states>
+    <states id="2">
+      <operations id="24" stage="1" latency="2"/>
+    </states>
+    <states id="3">
+      <operations id="25" stage="1" latency="1"/>
+      <operations id="26" stage="1" latency="1"/>
+      <operations id="27" stage="1" latency="1"/>
+      <operations id="29" stage="1" latency="1"/>
+      <operations id="30" stage="1" latency="1"/>
+      <operations id="31" stage="1" latency="1"/>
+      <operations id="32" stage="1" latency="1"/>
+      <operations id="33" stage="1" latency="1"/>
+      <operations id="34" stage="1" latency="1"/>
+      <operations id="35" stage="1" latency="1"/>
+      <operations id="36" stage="1" latency="1"/>
+      <operations id="37" stage="1" latency="1"/>
+      <operations id="38" stage="1" latency="1"/>
+      <operations id="39" stage="1" latency="1"/>
+      <operations id="40" stage="1" latency="1"/>
+      <operations id="41" stage="1" latency="1"/>
+      <operations id="44" stage="1" latency="1"/>
+      <operations id="45" stage="1" latency="1"/>
+      <operations id="46" stage="1" latency="1"/>
+      <operations id="47" stage="1" latency="1"/>
+      <operations id="51" stage="1" latency="1"/>
+      <operations id="52" stage="1" latency="1"/>
+      <operations id="53" stage="1" latency="1"/>
+      <operations id="54" stage="1" latency="1"/>
+      <operations id="55" stage="1" latency="1"/>
+    </states>
+    <states id="4">
+      <operations id="10" stage="1" latency="1"/>
+      <operations id="11" stage="1" latency="1"/>
+      <operations id="12" stage="1" latency="1"/>
+      <operations id="13" stage="1" latency="1"/>
+      <operations id="14" stage="1" latency="1"/>
+      <operations id="15" stage="1" latency="1"/>
+      <operations id="16" stage="1" latency="1"/>
+      <operations id="17" stage="1" latency="1"/>
+      <operations id="18" stage="1" latency="1"/>
+      <operations id="28" stage="1" latency="1"/>
+      <operations id="42" stage="1" latency="1"/>
+      <operations id="43" stage="1" latency="1"/>
+      <operations id="48" stage="1" latency="1"/>
+      <operations id="49" stage="1" latency="1"/>
+      <operations id="50" stage="1" latency="1"/>
+      <operations id="56" stage="1" latency="1"/>
+    </states>
+    <transitions inState="1" outState="2">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="2" outState="3">
+      <condition id="-1"/>
+    </transitions>
+    <transitions inState="3" outState="4">
+      <condition id="-1"/>
+    </transitions>
+  </fsm>
+  <CFGRegionsRoot>
+    <cfgRegions mId="1" mTag="cordiccart2pol" mII="-1" mDepth="-1" mMinTripCount="-1" mMaxTripCount="-1" mMinLatency="17" mMaxLatency="17">
+      <basicBlocks>57</basicBlocks>
+      <mDfPipe/>
+    </cfgRegions>
+  </CFGRegionsRoot>
+</cdfg:DBCdfg>

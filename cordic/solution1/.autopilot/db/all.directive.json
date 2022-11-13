@@ -1,0 +1,35 @@
+{"sourceFile": [{
+      "name": "",
+      "directive": [
+        {
+          "functionName": "cordiccart2pol",
+          "label": "",
+          "functionLabel": "",
+          "id": "1",
+          "sourceFile": "C:\/Users\/edan\/Desktop\/LabC\/cordic_HLS\/solution1\/directives.tcl",
+          "sourceLine": "6",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "cordiccart2pol"
+              }]
+          }
+        },
+        {
+          "functionName": "cordiccart2pol",
+          "label": "",
+          "functionLabel": "",
+          "id": "2",
+          "sourceFile": "C:\/Users\/edan\/Desktop\/LabC\/cordic_HLS\/solution1\/csynth.tcl",
+          "sourceLine": "16",
+          "pragma": {
+            "name": "TOP",
+            "option": [{
+                "name": "name",
+                "value": "cordiccart2pol"
+              }]
+          }
+        }
+      ]
+    }]}
